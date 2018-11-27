@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporting</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/mCustomScrollbar.concat.min.js"></script>
+    <script src="js/chart.bundle.js"></script>
+    <script src="js/solid.js"></script>
+    <script src="js/fontawesome5.js"></script>
+
+
+</head>
+
+<body>
+
+
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="logo-style">
+                    <img src="images/logo.png" class="d-block mx-auto" width="100" height="100"/>
+                </div>
+
+                <div class="sidebar-nav">
+
+                    <ul class="list-unstyled components">
+
+                        <li> <a href="admin-dashboard.html">Dashboard</a> </li>
+                        <li>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Loans</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li> <a href="loan-requests.html">Loan Requests</a> </li>
+                                <li> <a href="manage-loans.html">Manage Loans</a> </li>
+                            </ul>
+                        </li>
+                        <li> <a href="defaulters.html">Defaulters</a> </li>
+                        <li> <a href="transactions.html">Transactions</a> </li>
+                        <li> <a href="customers.html">Customers</a> </li>
+                        <li class="active"> <a href="reporting.html">Reporting</a> </li>
+                        <li> <a href="#">Logout</a> </li>
+
+                    </ul>
+
+                </div>
+
+
+
+            </nav>
+
+
+
+            <!-- Page Content  -->
+            <div id="content">
+
+                <div>
+                    <div class="col-lg-12" style="width: 100%; height: 50px; background: #F2F2F2;">
+                        <button type="button" id="sidebarCollapse" class="btn blue-button" style="margin-top: 8px;">
+                            <i class="fas fa-align-left"></i>
+                            <!--<span>Toggle Sidebar</span>-->Toggle Menu
+                        </button>
+                    </div>
+
+                    <div class="content-wrapper">
+
+                        <div class="menu-heading">
+                            <h1>Reporting</h1>
+
+                            <form>
+
+                                <span>From: </span>
+                                <input type="date">
+
+                                <span>To: </span>
+                                <input type="date">
+
+                                <input class="green-button" type="submit" value="Search">
+                            </form>
+
+                        </div>
+
+
+                        <div class="row" style="padding: 0px 30px">
+
+                            <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+
+                                <!-- 1ST ROW -->
+                                <div class="row">
+
+                                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 class="title-small">Loan Disbursed</h6>
+
+                                            <div>
+                                                <span class="dashboard-figure-small" style="color: #627CF6;">31,111,723.75</span>
+                                                <span class="ngn-small">NGN</span>
+                                            </div>
+
+                                            <div class="dashboard-link">
+                                                <a href="#">65 Members</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 class="title-small">Loan Repayed</h6>
+
+                                            <div>
+                                                <span class="dashboard-figure-small" style="color: #22B573;">5,478,021.75</span>
+                                                <span class="ngn-small">NGN</span>
+                                            </div>
+
+                                            <div class="dashboard-link">
+                                                <a href="#">65 Members</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 class="title-small">Overdue Loans</h6>
+
+                                            <div>
+                                                <span class="dashboard-figure-small" style="color: red;">19,894,981.75</span>
+                                                <span class="ngn-small">NGN</span>
+                                            </div>
+
+                                            <div class="dashboard-link">
+                                                <a href="#">65 Members</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 class="title-small">Transactions</h6>
+
+                                            <div>
+                                                <span class="dashboard-figure-small" style="color: orange;">5,971</span>
+                                            </div>
+
+                                            <div class="dashboard-link">
+                                                <a href="#">65 Members</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- 2ND ROW -->
+                                <div class="row" style="margin-top: 30px;">
+
+                                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 class="title-small">New Loan Requests</h6>
+
+                                            <div>
+                                                <span class="dashboard-figure-small" style="color: #627CF6;">12,092,890.90</span>
+                                                <span class="ngn-small">NGN</span>
+                                            </div>
+
+                                            <div class="dashboard-link">
+                                                <a href="#">65 Members</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 class="title-small">Loans Given</h6>
+
+                                            <div>
+                                                <span class="dashboard-figure-small" style="color: #22B573;">31,111,723.75</span>
+                                                <span class="ngn-small">NGN</span>
+                                            </div>
+
+                                            <div class="dashboard-link">
+                                                <a href="#">65 Members</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 class="title-small">Loans Rejected </h6>
+
+                                            <div>
+                                                <span class="dashboard-figure-small" style="color: red;">12,092,890.90</span>
+                                                <span class="ngn-small">NGN</span>
+                                            </div>
+
+                                            <div class="dashboard-link">
+                                                <a href="#">65 Members</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 class="title-small">Pending Loan Requests</h6>
+
+                                            <div>
+                                                <span class="dashboard-figure-small" style="color: orange;">31,111,723.75</span>
+                                                <span class="ngn-small">NGN</span>
+                                            </div>
+
+                                            <div class="dashboard-link">
+                                                <a href="#">65 Members</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- 3RD ROW -->
+                                <div class="row" style="margin-top: 30px;">
+
+                                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 class="title-small">Good Credit Score Rating </h6>
+
+                                            <div>
+                                                <span class="dashboard-figure-small" style="color: #22B573;">12,092,890.90</span>
+                                                <span class="ngn-small">NGN</span>
+                                            </div>
+
+                                            <div class="dashboard-link">
+                                                <a href="#">65 Members</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 class="title-small">Average Credit Score Rating</h6>
+
+                                            <div>
+                                                <span class="dashboard-figure-small" style="color: orange;">31,111,723.75</span>
+                                                <span class="ngn-small">NGN</span>
+                                            </div>
+
+                                            <div class="dashboard-link">
+                                                <a href="#">65 Members</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 class="title-small">Bad Credit Score Rating</h6>
+
+                                            <div>
+                                                <span class="dashboard-figure-small" style="color: red;">12,092,890.90</span>
+                                                <span class="ngn-small">NGN</span>
+                                            </div>
+
+                                            <div class="dashboard-link">
+                                                <a href="#">65 Members</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
+
+
+</body>
+</html>

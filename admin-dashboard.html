@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/mCustomScrollbar.concat.min.js"></script>
+    <script src="js/chart.bundle.js"></script>
+    <script src="js/solid.js"></script>
+    <script src="js/fontawesome5.js"></script>
+
+
+</head>
+
+<body>
+
+
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="logo-style">
+            <img src="images/logo.png" class="d-block mx-auto" width="100" height="100"/>
+        </div>
+
+        <div class="sidebar-nav">
+
+            <ul class="list-unstyled components">
+
+                <li class="active"> <a href="admin-dashboard.html">Dashboard</a> </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Loans</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li> <a href="loan-requests.html">Loan Requests</a> </li>
+                        <li> <a href="manage-loans.html">Manage Loans</a> </li>
+                    </ul>
+                </li>
+                <li> <a href="defaulters.html">Defaulters</a> </li>
+                <li> <a href="transactions.html">Transactions</a> </li>
+                <li> <a href="customers.html">Customers</a> </li>
+                <li> <a href="reporting.html">Reporting</a> </li>
+                <li> <a href="#">Logout</a> </li>
+
+            </ul>
+
+        </div>
+
+
+
+    </nav>
+
+
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <div>
+            <div class="col-lg-12" style="width: 100%; height: 50px; background: #F2F2F2;">
+                <button type="button" id="sidebarCollapse" class="btn blue-button" style="margin-top: 8px;">
+                    <i class="fas fa-align-left"></i>
+                    <!--<span>Toggle Sidebar</span>-->Toggle Menu
+                </button>
+            </div>
+
+            <div class="content-wrapper">
+
+                <div class="menu-heading">
+                    <h1>Dashboard</h1>
+                </div>
+
+                <!-- TOP HALF -->
+                <div class="row row-eq-height" style="padding: 0px 30px">
+
+                    <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+                        <h6 class="title-small">TOTAL LOANS OUTSTANDING</h6>
+
+                        <div class="box-card">
+
+                            <div class="row">
+
+                                <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+                                    <div>
+                                        <span class="dashboard-figure">194,092,890.90</span>
+                                        <span class="ngn">NGN</span>
+                                    </div>
+
+
+                                    <div>
+                                        <h6 class="title-small" style="margin-top: 7px;">LOANS DISBURSED THIS YEAR</h6>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+                                    <div>
+                                        <span class="dashboard-figure-purple">578,912,646.18</span>
+                                        <span class="ngn">NGN</span>
+                                    </div>
+
+
+                                    <div>
+                                        <h6 class="title-small" style="margin-top: 7px;">LOANS PAID BACK THIS YEAR</h6>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            <div style="margin-top: 10px;">
+
+                                <canvas id="myChart" height="130"></canvas>
+                                <script>
+                                    var ctx = document.getElementById("myChart").getContext('2d');
+                                    var myChart = new Chart(ctx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                                            datasets: [{
+                                                label: 'Loans Repayed',
+                                                data: [250000, 320000, 130000, 450000, 200000, 100000],
+                                                backgroundColor: [
+                                                    'rgba(255, 99, 132, 0.7)',
+                                                    'rgba(54, 162, 235, 0.7)',
+                                                    'rgba(255, 206, 86, 0.7)',
+                                                    'rgba(75, 192, 192, 0.7)',
+                                                    'rgba(153, 102, 255, 0.7)',
+                                                    'rgba(255, 159, 64, 0.7)'
+                                                ],
+                                                borderColor: [
+                                                    'rgba(255,99,132,1)',
+                                                    'rgba(54, 162, 235, 1)',
+                                                    'rgba(255, 206, 86, 1)',
+                                                    'rgba(75, 192, 192, 1)',
+                                                    'rgba(153, 102, 255, 1)',
+                                                    'rgba(255, 159, 64, 1)'
+                                                ],
+                                                borderWidth: 1
+                                            }]
+                                        },
+                                        options: {
+                                            scales: {
+                                                yAxes: [{
+                                                    ticks: {
+                                                        beginAtZero:true
+                                                    }
+                                                }]
+                                            }
+                                        }
+                                    });
+                                </script>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+                        <h6 class="title-small">OUTSTANDING DELAY STATUS</h6>
+
+                        <!-- 1ST ROW OF 2ND HALF -->
+
+                        <div class="row">
+
+                            <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+
+                                <div class="box-card">
+
+                                    <h6 class="title-small">Ontime</h6>
+
+                                    <div>
+                                        <span class="dashboard-figure-small">12,092,890.90</span>
+                                        <span class="ngn-small">NGN</span>
+                                    </div>
+
+                                    <div class="dashboard-link">
+                                        <a href="defaulters.html">65 Members</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+
+                                <div class="box-card">
+
+                                    <h6 class="title-small">30 Days Late</h6>
+
+                                    <div>
+                                        <span class="dashboard-figure-small">31,111,723.75</span>
+                                        <span class="ngn-small">NGN</span>
+                                    </div>
+
+                                    <div class="dashboard-link">
+                                        <a href="defaulters.html">65 Members</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- 2ND ROW OF 2ND HALF -->
+                        <div class="row">
+
+                            <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+
+                                <div class="box-card">
+
+                                    <h6 class="title-small">60 Days Late</h6>
+
+                                    <div>
+                                        <span class="dashboard-figure-small">41,508,766.32</span>
+                                        <span class="ngn-small">NGN</span>
+                                    </div>
+
+                                    <div class="dashboard-link">
+                                        <a href="defaulters.html">65 Members</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+
+                                <div class="box-card">
+
+                                    <h6 class="title-small">90 Days Late</h6>
+
+                                    <div>
+                                        <span class="dashboard-figure-small">101,718,114.90</span>
+                                        <span class="ngn-small">NGN</span>
+                                    </div>
+
+                                    <div class="dashboard-link">
+                                        <a href="defaulters.html">65 Members</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <!-- BOTTOM HALF -->
+
+                <div class="row" style="padding: 0px 30px; margin-top: 30px;">
+
+                    <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+                        <h6 class="title-small">NEW LOAN REQUESTS <span class="float-right admin-link"><a href="loan-requests.html">View More</a></span> </h6>
+                        <div>
+
+                            <table class="table">
+                                <tbody>
+                                <tr class="fancy-table">
+                                    <td><img src="images/michelle-profile-concept-circle.png" width="30" height="30" /></td>
+                                    <td>Ronke Ademola</td>
+                                    <td style="color: gray;"><span class="orange" style="font-weight: bold;">3.1</span> / 5</td>
+                                    <td class="price-table">1,500,000.00 <span class="ngn-table">NGN</span></td>
+                                </tr>
+
+                                <tr class="fancy-table">
+                                    <td><img src="images/Jeroen-Van-Dalen-(circle-profile).png" width="30" height="30" /></td>
+                                    <td>Ronke Ademola</td>
+                                    <td style="color: gray;"><span class="green" style="font-weight: bold;">4</span> / 5</td>
+                                    <td class="price-table">1,500,000.00 <span class="ngn-table">NGN</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+                        <h6 class="title-small">DEFAULTERS <span class="float-right admin-link"><a href="defaulters.html">View More</a></span></h6>
+
+                        <table class="table table-responsive-md table-responsive-sm table-responsive-xl">
+                            <tbody>
+                            <tr class="fancy-table">
+                                <td><img src="images/my-profile-pic-circular2.png" width="30" height="30" /></td>
+                                <td>Rahmat Bello</td>
+                                <td style="color: gray;">080903211134</td>
+                                <td class="price-table">1,500,000.00 <span class="ngn-table">NGN</span></td>
+                            </tr>
+
+                            <tr class="fancy-table">
+                                <td><img src="images/sarah-profile-circle.png" width="30" height="30" /></td>
+                                <td>Ronke Ademola</td>
+                                <td style="color: gray;">080903211134</td>
+                                <td class="price-table">1,500,000.00 <span class="ngn-table">NGN</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar, #content').toggleClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+</script>
+
+
+</body>
+</html>

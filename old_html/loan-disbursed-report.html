@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/chart.bundle.js"></script>
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+
+        <div id="sidebar-wrapper">
+            <div class="logo-style">
+                <img src="images/logo.png" class="d-block mx-auto" width="100" height="100"/>
+            </div>
+
+            <div class="sidebar-nav">
+                <ul class="list-unstyled">
+                    <li> <a href="admin-dashboard.html">Dashboard</a> </li>
+                    <li> <a href="loan-requests.html">Loan Requests</a> </li>
+                    <li> <a href="defaulters.html">Defaulters</a> </li>
+                    <li> <a href="transactions.html">Transactions</a> </li>
+                    <li class="selected"> <a href="#">Customers</a> </li>
+                    <li> <a href="reporting.html">Reporting</a> </li>
+                    <li> <a href="#">Logout</a> </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div>
+                <div class="col-lg-12" style="width: 100%; height: 50px; background: #F2F2F2;">
+                    <!--<a href="#" class="btn btn-success" id="menu-toggle">Menu Toggle</a>-->
+                </div>
+
+                <div class="menu-heading">
+                    <h1 style="font-weight: 700; color: black;">Loan Disbursed Report</h1>
+                </div>
+
+                <div class="row container" style="padding-left: 50px;">
+
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 profile-box" style="padding: 25px;">
+
+                        <div>
+                            <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="pills-overview" href="#pills-overview-tab" data-toggle="pill" role="tab" aria-controls="pills-overview" aria-selected="true">Overview</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-activity" data-toggle="pill" href="#pills-activity-tab" role="tab" aria-controls="pills-transactions" aria-selected="false">Activity</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-transactions" data-toggle="pill" href="#pills-transactions-tab" role="tab" aria-controls="pills-transactions" aria-selected="false">Transactions</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content" id="pills-tabContent">
+
+                                <!-- OVERVIEW TAB -->
+                                <div class="tab-pane fade show active" id="pills-overview-tab" role="tabpanel" aria-labelledby="pills-overview">
+
+
+                                    <div>
+
+                                        <canvas id="myChart" height="120"></canvas>
+                                        <script>
+                                            var ctx = document.getElementById("myChart").getContext('2d');
+                                            var myChart = new Chart(ctx, {
+                                                type: 'radar',
+                                                data: {
+                                                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                                                    datasets: [{
+                                                        label: '# of Votes',
+                                                        data: [12, 19, 3, 5, 2, 3],
+                                                        backgroundColor: [
+                                                            'rgba(255, 99, 132, 0.2)',
+                                                            'rgba(54, 162, 235, 0.2)',
+                                                            'rgba(255, 206, 86, 0.2)',
+                                                            'rgba(75, 192, 192, 0.2)',
+                                                            'rgba(153, 102, 255, 0.2)',
+                                                            'rgba(255, 159, 64, 0.2)'
+                                                        ],
+                                                        borderColor: [
+                                                            'rgba(255,99,132,1)',
+                                                            'rgba(54, 162, 235, 1)',
+                                                            'rgba(255, 206, 86, 1)',
+                                                            'rgba(75, 192, 192, 1)',
+                                                            'rgba(153, 102, 255, 1)',
+                                                            'rgba(255, 159, 64, 1)'
+                                                        ],
+                                                        borderWidth: 1
+                                                    }]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        yAxes: [{
+                                                            ticks: {
+                                                                beginAtZero:true
+                                                            }
+                                                        }]
+                                                    }
+                                                }
+                                            });
+                                        </script>
+
+                                    </div>
+
+
+
+
+                                </div>
+
+                                <!-- ACTIVITY TAB -->
+                                <div class="tab-pane fade" id="pills-activity-tab" role="tabpanel" aria-labelledby="pills-transactions">
+
+                                    <!-- 1ST ROW OF 2ND HALF -->
+
+                                    <div class="row" style="margin-top: 30px;">
+
+                                        <div class="col-6 col-lg-6 col-md-6 col-sm-12">
+
+                                            <div class="box-card">
+
+                                                <h6 class="title-small">Loans Requested</h6>
+
+                                                <div>
+                                                    <span class="dashboard-figure-small" style="color: blue;">12,092,890.90</span>
+                                                    <span class="ngn-small">NGN</span>
+                                                </div>
+
+                                                <div class="dashboard-link">
+                                                    <a href="defaulters.html">65 Members</a>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-6 col-lg-6 col-md-6 col-sm-12">
+
+                                            <div class="box-card">
+
+                                                <h6 class="title-small">Loans Paid Back</h6>
+
+                                                <div>
+                                                    <span class="dashboard-figure-small" style="color: #22B573;">31,111,723.75</span>
+                                                    <span class="ngn-small">NGN</span>
+                                                </div>
+
+                                                <div class="dashboard-link">
+                                                    <a href="defaulters.html">65 Members</a>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- 2ND ROW OF 2ND HALF -->
+                                    <div class="row">
+
+                                        <div class="col-6 col-lg-6 col-md-6 col-sm-12">
+
+                                            <div class="box-card">
+
+                                                <h6 class="title-small">Overdue Loans</h6>
+
+                                                <div>
+                                                    <span class="dashboard-figure-small" style="color: orange;">41,508,766.32</span>
+                                                    <span class="ngn-small">NGN</span>
+                                                </div>
+
+                                                <div class="dashboard-link">
+                                                    <a href="defaulters.html">65 Members</a>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-6 col-lg-6 col-md-6 col-sm-12">
+
+                                            <div class="box-card">
+
+                                                <h6 class="title-small">Loans Rejected</h6>
+
+                                                <div>
+                                                    <span class="dashboard-figure-small" style="color: red;">101,718,114.90</span>
+                                                    <span class="ngn-small">NGN</span>
+                                                </div>
+
+                                                <div class="dashboard-link">
+                                                    <a href="defaulters.html">65 Members</a>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- TRANSACTION TAB -->
+                                <div class="tab-pane fade" id="pills-transactions-tab" role="tabpanel" aria-labelledby="pills-transactions">
+
+                                    <div style="overflow: auto; height: 370px;">
+                                        <table class="table text-nowrap">
+                                            <thead style="background-color: #627CF6; color: white;">
+                                            <tr>
+                                                <td>Sn</td>
+                                                <td>Type</td>
+                                                <td>Interest</td>
+                                                <td>Loan Type</td>
+                                                <td>Amount</td>
+                                                <td>Date</td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr class="fancy-table-alt">
+                                                <td>1</td>
+                                                <td><span class="disburse">Disbursements</span></td>
+                                                <td>10% / 4 months</td>
+                                                <td>Personal</td>
+                                                <td>15,000,000.00</td>
+                                                <td>17 Oct 2018</td>
+                                            </tr>
+
+                                            <tr class="fancy-table-alt">
+                                                <td>2</td>
+                                                <td><span class="disburse">Disbursements</span></td>
+                                                <td>20% / 9 months</td>
+                                                <td>School Fees</td>
+                                                <td>850,000.00</td>
+                                                <td>17 Oct 2018</td>
+                                            </tr>
+
+                                            <tr class="fancy-table-alt">
+                                                <td>3</td>
+                                                <td><span class="repay">Repayments</span></td>
+                                                <td>7% / 8 months</td>
+                                                <td>Business</td>
+                                                <td>5,500,000.00</td>
+                                                <td>17 Oct 2018</td>
+                                            </tr>
+
+                                            <tr class="fancy-table-alt">
+                                                <td>4</td>
+                                                <td><span class="disburse">Disbursements</span></td>
+                                                <td>34% / 1 yr 6 mts</td>
+                                                <td>Marriage</td>
+                                                <td>25,500,700.00</td>
+                                                <td>17 Oct 2018</td>
+                                            </tr>
+
+                                            <tr class="fancy-table-alt">
+                                                <td>5</td>
+                                                <td><span class="repay">Repayments</span></td>
+                                                <td>15% / 2 months</td>
+                                                <td>Business</td>
+                                                <td>7,500,000.00</td>
+                                                <td>17 Oct 2018</td>
+                                            </tr>
+
+                                            <tr class="fancy-table-alt">
+                                                <td>6</td>
+                                                <td><span class="repay">Repayments</span></td>
+                                                <td>10% / 9 months</td>
+                                                <td>School Fees</td>
+                                                <td>250,000.00</td>
+                                                <td>17 Oct 2018</td>
+                                            </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+     <!--Menu Toggle Script-->
+    <!--<script>-->
+        <!--$("#menu-toggle").click( function (e) {-->
+            <!--e.preventDefault();-->
+            <!--$("#wrapper").toggleClass("menuDisplayed");-->
+
+        <!--});-->
+
+    <!--</script>-->
+
+</body>
+</html>

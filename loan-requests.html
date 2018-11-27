@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Requests</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/mCustomScrollbar.concat.min.js"></script>
+    <script src="js/chart.bundle.js"></script>
+    <script src="js/solid.js"></script>
+    <script src="js/fontawesome5.js"></script>
+
+
+</head>
+
+<body>
+
+
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="logo-style">
+                    <img src="images/logo.png" class="d-block mx-auto" width="100" height="100"/>
+                </div>
+
+                <div class="sidebar-nav">
+
+                    <ul class="list-unstyled components">
+
+                        <li> <a href="admin-dashboard.html">Dashboard</a> </li>
+                        <li>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Loans</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li class="active"> <a href="loan-requests.html">Loan Requests</a> </li>
+                                <li> <a href="manage-loans.html">Manage Loans</a> </li>
+                            </ul>
+                        </li>
+                        <li> <a href="defaulters.html">Defaulters</a> </li>
+                        <li> <a href="transactions.html">Transactions</a> </li>
+                        <li> <a href="customers.html">Customers</a> </li>
+                        <li> <a href="reporting.html">Reporting</a> </li>
+                        <li> <a href="#">Logout</a> </li>
+
+                    </ul>
+
+                </div>
+
+
+
+            </nav>
+
+
+
+            <!-- Page Content  -->
+            <div id="content">
+
+                <div>
+                    <div class="col-lg-12" style="width: 100%; height: 50px; background: #F2F2F2;">
+                        <button type="button" id="sidebarCollapse" class="btn blue-button" style="margin-top: 8px;">
+                            <i class="fas fa-align-left"></i>
+                            <!--<span>Toggle Sidebar</span>-->Toggle Menu
+                        </button>
+                    </div>
+
+                    <div class="content-wrapper">
+
+                        <div class="menu-heading">
+                            <h1 style="font-weight: 700; color: black;">Loan Requests</h1>
+                        </div>
+
+
+
+                        <div class="row" style="padding: 0px 10px;">
+
+                            <div class="col-12 col-lg-12 col-md-12 col-sm-12 filter-div">
+                                <form>
+                                    <!--<select>-->
+                                    <!--<option value=""> Select Filter </option>-->
+                                    <!--<option value="">All</option>-->
+                                    <!--<option value="">30 Days</option>-->
+                                    <!--<option value="">60 Days</option>-->
+                                    <!--<option value="">90 Days</option>-->
+                                    <!--</select>-->
+
+                                    <span>From: </span>
+                                    <input type="date">
+
+                                    <span>To: </span>
+                                    <input type="date">
+
+                                    <input class="green-button" type="submit" value="Search">
+                                    <button class="btn btn-sm blue-button float-right">New Loan Request</button>
+                                </form>
+                            </div>
+
+                            <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+
+                                <table class="table text-nowrap">
+                                    <thead style="background-color: #627CF6; color: white;">
+                                    <tr>
+                                        <td><input type="checkbox"/>&nbsp;</td>
+                                        <td>Sn</td>
+                                        <td></td>
+                                        <td>Customer Name</td>
+                                        <td>Loan Type</td>
+                                        <td>Amount</td>
+                                        <td>Trust</td>
+                                        <td>Phone Number</td>
+                                        <td>Date</td>
+                                        <td>Actions</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="fancy-table-alt">
+                                        <td><input type="checkbox"/>&nbsp;</td>
+                                        <td>1</td>
+                                        <td><img src="images/michelle-profile-concept-circle.png" width="30" height="30" /></td>
+                                        <td>Ronke Ademola</td>
+                                        <td>Personal</td>
+                                        <td>15,000,000.00</td>
+                                        <td style="color: gray;"><span class="orange" style="font-weight: bold;">3.1</span> / 5</td>
+                                        <td>080903211134</td>
+                                        <td>17 Oct 2018</td>
+                                        <td>
+                                            <button class="btn btn-sm blue-button">View</button>
+                                            <button class="btn btn-sm green-button">Accept</button>
+                                            <button class="btn btn-sm red-button">Delete</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="fancy-table-alt">
+                                        <td><input type="checkbox"/>&nbsp;</td>
+                                        <td>2</td>
+                                        <td><img src="images/Jeroen-Van-Dalen-(circle-profile).png" width="30" height="30" /></td>
+                                        <td>Moshood Ibrahim</td>
+                                        <td>School Fees</td>
+                                        <td>850,000.00</td>
+                                        <td style="color: gray;"><span class="green" style="font-weight: bold;">3.1</span> / 5</td>
+                                        <td>080903211134</td>
+                                        <td>17 Oct 2018</td>
+                                        <td>
+                                            <button class="btn btn-sm blue-button">View</button>
+                                            <button class="btn btn-sm green-button">Accept</button>
+                                            <button class="btn btn-sm red-button">Delete</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="fancy-table-alt">
+                                        <td><input type="checkbox"/>&nbsp;</td>
+                                        <td>3</td>
+                                        <td><img src="images/my-profile-pic-circular2.png" width="30" height="30" /></td>
+                                        <td>Nkem Idibia</td>
+                                        <td>Business</td>
+                                        <td>5,500,000.00</td>
+                                        <td style="color: gray;"><span class="red" style="font-weight: bold;">3.1</span> / 5</td>
+                                        <td>080903211134</td>
+                                        <td>17 Oct 2018</td>
+                                        <td>
+                                            <button class="btn btn-sm blue-button">View</button>
+                                            <button class="btn btn-sm green-button">Accept</button>
+                                            <button class="btn btn-sm red-button">Delete</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="fancy-table-alt">
+                                        <td><input type="checkbox"/>&nbsp;</td>
+                                        <td>4</td>
+                                        <td><img src="images/sarah-profile-circle.png" width="30" height="30" /></td>
+                                        <td>Jimmy Neutron</td>
+                                        <td>Marriage</td>
+                                        <td>25,500,700.00</td>
+                                        <td style="color: gray;"><span class="red" style="font-weight: bold;">3.1</span> / 5</td>
+                                        <td>080903211134</td>
+                                        <td>17 Oct 2018</td>
+                                        <td>
+                                            <button class="btn btn-sm blue-button">View</button>
+                                            <button class="btn btn-sm green-button">Accept</button>
+                                            <button class="btn btn-sm red-button">Delete</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="fancy-table-alt">
+                                        <td><input type="checkbox"/>&nbsp;</td>
+                                        <td>5</td>
+                                        <td><img src="images/michelle-profile-concept-circle.png" width="30" height="30" /></td>
+                                        <td>Tolu Filani</td>
+                                        <td>Business</td>
+                                        <td>7,500,000.00</td>
+                                        <td style="color: gray;"><span class="green" style="font-weight: bold;">3.1</span> / 5</td>
+                                        <td>080903211134</td>
+                                        <td>17 Oct 2018</td>
+                                        <td>
+                                            <button class="btn btn-sm blue-button">View</button>
+                                            <button class="btn btn-sm green-button">Accept</button>
+                                            <button class="btn btn-sm red-button">Delete</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="fancy-table-alt">
+                                        <td><input type="checkbox"/>&nbsp;</td>
+                                        <td>6</td>
+                                        <td><img src="images/Jeroen-Van-Dalen-(circle-profile).png" width="30" height="30" /></td>
+                                        <td>Yero Hafsat</td>
+                                        <td>School Fees</td>
+                                        <td>250,000.00</td>
+                                        <td style="color: gray;"><span class="orange" style="font-weight: bold;">3.1</span> / 5</td>
+                                        <td>080903211134</td>
+                                        <td>17 Oct 2018</td>
+                                        <td>
+                                            <button class="btn btn-sm blue-button">View</button>
+                                            <button class="btn btn-sm green-button">Accept</button>
+                                            <button class="btn btn-sm red-button">Delete</button>
+                                        </td>
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
+
+
+</body>
+</html>

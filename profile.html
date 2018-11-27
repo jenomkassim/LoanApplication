@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/mCustomScrollbar.concat.min.js"></script>
+    <script src="js/chart.bundle.js"></script>
+    <script src="js/solid.js"></script>
+    <script src="js/fontawesome5.js"></script>
+
+
+</head>
+
+<body>
+
+
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="logo-style">
+                    <img src="images/logo.png" class="d-block mx-auto" width="100" height="100"/>
+                </div>
+
+                <div class="sidebar-nav">
+
+                    <ul class="list-unstyled components">
+
+                        <li> <a href="admin-dashboard.html">Dashboard</a> </li>
+                        <li> <a href="loan-requests.html">Loan Requests</a> </li>
+                        <li> <a href="defaulters.html">Defaulters</a> </li>
+                        <li> <a href="transactions.html">Transactions</a> </li>
+                        <li class="active"> <a href="customers.html">Customers</a> </li>
+                        <li> <a href="reporting.html">Reporting</a> </li>
+                        <li> <a href="#">Logout</a> </li>
+                    </ul>
+
+                </div>
+
+
+
+            </nav>
+
+
+
+            <!-- Page Content  -->
+            <div id="content">
+
+                <div>
+                    <div class="col-lg-12" style="width: 100%; height: 50px; background: #F2F2F2;">
+                        <button type="button" id="sidebarCollapse" class="btn blue-button" style="margin-top: 8px;">
+                            <i class="fas fa-align-left"></i>
+                            <!--<span>Toggle Sidebar</span>-->Toggle Menu
+                        </button>
+                    </div>
+
+                    <div class="content-wrapper">
+
+                        <div class="menu-heading">
+                            <h1 style="font-weight: 700; color: black;">Customers</h1>
+                        </div>
+
+                        <div class="row" style="padding-left: 50px;">
+
+                            <!-- LEFT SIDE -->
+
+                            <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 profile-box" style="padding: 25px;">
+                                <img src="images/sarah-profile-circle.png" class="d-block mx-auto" style="width: 100px; height: 100px;">
+                                <p class="text-center" style="color: black; font-size: 22px; font-weight: 500;">Yero Hafsat</p>
+                                <p class="text-center" style="color: lightgray; font-weight: 500; margin-top: -15px;"><span style="color: orange">3.1</span> / 5</p>
+                                <hr>
+                                <!--<p>Contact Information</p>-->
+
+                                <div>
+                                    <span>Email Address</span>
+                                    <p style="color: black;">yerohafsat@gmail.com</p>
+                                </div>
+
+                                <div>
+                                    <span>Phone Number</span>
+                                    <p style="color: black;">080903211134</p>
+                                </div>
+
+                                <div>
+                                    <span>Address</span>
+                                    <p style="color: black;">56 Mobolaji Bank Anthony Way</p>
+                                </div>
+
+                                <hr>
+
+                            </div>
+
+                            <div style="padding: 0 10px;"></div>
+
+                            <!-- RIGHT SIDE -->
+
+                            <div class="col-md-8 col-lg-8 col-sm-8 col-xs-12 profile-box-flat" style="padding: 25px;">
+
+                                <div>
+                                    <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="pills-overview" href="#pills-overview-tab" data-toggle="pill" role="tab" aria-controls="pills-overview" aria-selected="true">Overview</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-activity" data-toggle="pill" href="#pills-activity-tab" role="tab" aria-controls="pills-transactions" aria-selected="false">Activity</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-transactions" data-toggle="pill" href="#pills-transactions-tab" role="tab" aria-controls="pills-transactions" aria-selected="false">Transactions</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-add-info" href="#pills-add-info-tab" data-toggle="pill" role="tab" aria-controls="pills-add-info" aria-selected="false">Additional Info</a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="tab-content" id="pills-tabContent">
+
+                                        <!-- OVERVIEW TAB -->
+                                        <div class="tab-pane fade show active" id="pills-overview-tab" role="tabpanel" aria-labelledby="pills-overview">
+
+
+
+                                            <!-- 1ST ROW OF 2ND HALF -->
+
+                                            <div class="row" style="margin-top: 30px;">
+
+                                                <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+
+                                                    <div class="box-card">
+
+                                                        <h6 class="title-small">Loans Requested</h6>
+
+                                                        <div>
+                                                            <span class="dashboard-figure-small" style="color: blue;">12,092,890.90</span>
+                                                            <span class="ngn-small">NGN</span>
+                                                        </div>
+
+                                                        <div class="dashboard-link">
+                                                            <span>Last Transaction Date: 25 Mar, 2018</span>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+
+                                                    <div class="box-card">
+
+                                                        <h6 class="title-small">Loans Paid Back</h6>
+
+                                                        <div>
+                                                            <span class="dashboard-figure-small" style="color: #22B573;">31,111,723.75</span>
+                                                            <span class="ngn-small">NGN</span>
+                                                        </div>
+
+                                                        <div class="dashboard-link">
+                                                            <span>Last Transaction Date: 25 Mar, 2018</span>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <!-- 2ND ROW OF 2ND HALF -->
+                                            <div class="row">
+
+                                                <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+
+                                                    <div class="box-card">
+
+                                                        <h6 class="title-small">Overdue Loans</h6>
+
+                                                        <div>
+                                                            <span class="dashboard-figure-small" style="color: orange;">41,508,766.32</span>
+                                                            <span class="ngn-small">NGN</span>
+                                                        </div>
+
+                                                        <div class="dashboard-link">
+                                                            <span>Last Transaction Date: 25 Mar, 2018</span>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+
+                                                    <div class="box-card">
+
+                                                        <h6 class="title-small">Loans Rejected</h6>
+
+                                                        <div>
+                                                            <span class="dashboard-figure-small" style="color: red;">101,718,114.90</span>
+                                                            <span class="ngn-small">NGN</span>
+                                                        </div>
+
+                                                        <div class="dashboard-link">
+                                                            <span>Last Transaction Date: 25 Mar, 2018</span>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <!-- ACTIVITY TAB -->
+                                        <div class="tab-pane fade" id="pills-activity-tab" role="tabpanel" aria-labelledby="pills-transactions">
+
+                                            <div style="margin-top: 30px;">
+
+                                                <canvas id="myChart" height="130"></canvas>
+                                                <script>
+                                                    var ctx = document.getElementById("myChart").getContext('2d');
+                                                    var myChart = new Chart(ctx, {
+                                                        type: 'bar',
+                                                        data: {
+                                                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                                                            datasets: [{
+                                                                label: 'Loans Repayed',
+                                                                data: [250000, 320000, 130000, 450000, 200000, 100000],
+                                                                backgroundColor: [
+                                                                    'rgba(255, 99, 132, 0.7)',
+                                                                    'rgba(54, 162, 235, 0.7)',
+                                                                    'rgba(255, 206, 86, 0.7)',
+                                                                    'rgba(75, 192, 192, 0.7)',
+                                                                    'rgba(153, 102, 255, 0.7)',
+                                                                    'rgba(255, 159, 64, 0.7)'
+                                                                ],
+                                                                borderColor: [
+                                                                    'rgba(255,99,132,1)',
+                                                                    'rgba(54, 162, 235, 1)',
+                                                                    'rgba(255, 206, 86, 1)',
+                                                                    'rgba(75, 192, 192, 1)',
+                                                                    'rgba(153, 102, 255, 1)',
+                                                                    'rgba(255, 159, 64, 1)'
+                                                                ],
+                                                                borderWidth: 1
+                                                            }]
+                                                        },
+                                                        options: {
+                                                            scales: {
+                                                                yAxes: [{
+                                                                    ticks: {
+                                                                        beginAtZero:true
+                                                                    }
+                                                                }]
+                                                            }
+                                                        }
+                                                    });
+                                                </script>
+
+                                            </div>
+
+                                        </div>
+
+                                        <!-- TRANSACTION TAB -->
+                                        <div class="tab-pane fade" id="pills-transactions-tab" role="tabpanel" aria-labelledby="pills-transactions">
+
+                                            <div style="overflow: auto; height: 370px;">
+                                                <table class="table text-nowrap">
+                                                    <thead style="background-color: #627CF6; color: white;">
+                                                    <tr>
+                                                        <td>Sn</td>
+                                                        <td>Type</td>
+                                                        <td>Interest</td>
+                                                        <td>Loan Type</td>
+                                                        <td>Amount</td>
+                                                        <td>Date</td>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr class="fancy-table-alt">
+                                                        <td>1</td>
+                                                        <td><span class="disburse">Disbursements</span></td>
+                                                        <td>10% / 4 months</td>
+                                                        <td>Personal</td>
+                                                        <td>15,000,000.00</td>
+                                                        <td>17 Oct 2018</td>
+                                                    </tr>
+
+                                                    <tr class="fancy-table-alt">
+                                                        <td>2</td>
+                                                        <td><span class="disburse">Disbursements</span></td>
+                                                        <td>20% / 9 months</td>
+                                                        <td>School Fees</td>
+                                                        <td>850,000.00</td>
+                                                        <td>17 Oct 2018</td>
+                                                    </tr>
+
+                                                    <tr class="fancy-table-alt">
+                                                        <td>3</td>
+                                                        <td><span class="repay">Repayments</span></td>
+                                                        <td>7% / 8 months</td>
+                                                        <td>Business</td>
+                                                        <td>5,500,000.00</td>
+                                                        <td>17 Oct 2018</td>
+                                                    </tr>
+
+                                                    <tr class="fancy-table-alt">
+                                                        <td>4</td>
+                                                        <td><span class="disburse">Disbursements</span></td>
+                                                        <td>34% / 1 yr 6 mts</td>
+                                                        <td>Marriage</td>
+                                                        <td>25,500,700.00</td>
+                                                        <td>17 Oct 2018</td>
+                                                    </tr>
+
+                                                    <tr class="fancy-table-alt">
+                                                        <td>5</td>
+                                                        <td><span class="repay">Repayments</span></td>
+                                                        <td>15% / 2 months</td>
+                                                        <td>Business</td>
+                                                        <td>7,500,000.00</td>
+                                                        <td>17 Oct 2018</td>
+                                                    </tr>
+
+                                                    <tr class="fancy-table-alt">
+                                                        <td>6</td>
+                                                        <td><span class="repay">Repayments</span></td>
+                                                        <td>10% / 9 months</td>
+                                                        <td>School Fees</td>
+                                                        <td>250,000.00</td>
+                                                        <td>17 Oct 2018</td>
+                                                    </tr>
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- ADDITIONAL INFO TAB -->
+                                        <div class="tab-pane fade" id="pills-add-info-tab" role="tabpanel" aria-labelledby="pills-add-info">
+                                            <hr>
+
+                                            <div>
+                                                <span>Bank Verification Number</span>
+                                                <p style="color: black;">34557899001</p>
+                                            </div>
+
+                                            <div>
+                                                <span>Referee</span>
+                                                <p style="color: black;">Mr Dele Lawal</p>
+                                            </div>
+
+                                            <div>
+                                                <span>Referee Phone No</span>
+                                                <p style="color: black;">+234 803 736 1111</p>
+                                            </div>
+
+                                            <div>
+                                                <span>Referee Address</span>
+                                                <p style="color: black;">56 Mobolaji Bank Anthony Way</p>
+                                            </div>
+
+                                            <hr>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
+
+
+</body>
+</html>
