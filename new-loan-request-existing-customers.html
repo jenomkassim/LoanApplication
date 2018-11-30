@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create Customer</title>
+    <title>Existing Customers New Loan Request</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/sidebar.css" />
     <script src="js/jquery-3.3.1.js"></script>
@@ -34,13 +34,13 @@
                         <li>
                             <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Loans</a>
                             <ul class="collapse list-unstyled" id="pageSubmenu">
-                                <li > <a href="loan-requests.html">Loan Requests</a> </li>
+                                <li class="active"> <a href="loan-requests.html">Loan Requests</a> </li>
                                 <li> <a href="manage-loans.html">Manage Loans</a> </li>
                             </ul>
                         </li>
                         <li> <a href="defaulters.html">Defaulters</a> </li>
                         <li> <a href="transactions.html">Transactions</a> </li>
-                        <li class="active"> <a href="customers.html">Customers</a> </li>
+                        <li> <a href="customers.html">Customers</a> </li>
                         <li> <a href="reporting.html">Reporting</a> </li>
                         <li> <a href="#">Logout</a> </li>
                     </ul>
@@ -67,7 +67,18 @@
                     <div class="content-wrapper">
 
                         <div class="menu-heading">
-                            <h1 style="font-weight: 700; color: black;">Create Customer</h1>
+                            <h1 style="font-weight: 700; color: black;">Existing Customers New Loan Request</h1>
+                        </div>
+
+                        <div class="col-12 col-lg-12 col-md-12 col-sm-12 filter-div" style="margin-bottom: 15px;">
+                            <form>
+
+                                <span>Enter Customer's Email Address: </span>
+                                <input type="email">
+
+                                <input class="green-button" type="submit" value="Search">
+                                <a href="new-loan-request.html" class="btn blue-button float-lg-right">Click Here for New Customers</a>
+                            </form>
                         </div>
 
                         <div class="row" style="padding-left: 50px;">
@@ -75,22 +86,43 @@
                             <!-- LEFT SIDE -->
 
                             <div class="col-md-12 col-lg-3 col-sm-12 col-xs-12 profile-box" style="padding: 25px;">
-                                <p class="text-center" style="color: black; font-size: 22px; font-weight: 500;">Upload Picture</p>
-                                <img src="images/avatar.png" class="d-block mx-auto img-fluid">
+                                <p class="text-center" style="color: black; font-size: 22px; font-weight: 500;">Select Loan Type</p>
 
                                 <hr>
 
-                                <form>
-                                    <div>
-                                        <input class="form-control" type="file" name="file" />
+                                <div class="row" style="margin-top: 30px;">
+
+                                    <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 style="color: gray;">Loan Option A</h6>
+
+                                        </div>
+
                                     </div>
 
-                                    <div style="margin-top: 10px;">
-                                        <input class="btn btn-block blue-button" type="submit" value="Upload" />
+                                    <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 style="color: gray;">Loan Option B</h6>
+
+                                        </div>
+
                                     </div>
 
+                                    <div class="col-12 col-lg-12 col-md-12 col-sm-12">
 
-                                </form>
+                                        <div class="box-card">
+
+                                            <h6 style="color: gray;">Loan Option C</h6>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
 
 
 
@@ -118,7 +150,7 @@
                                                     <h6 style="color: gray;">Surname</h6>
 
                                                     <div>
-                                                        <input class="form-control" type="text" name="surname">
+                                                        <input class="form-control" type="text" name="surname" readonly>
                                                     </div>
 
                                                 </div>
@@ -132,7 +164,7 @@
                                                     <h6 style="color: gray;">First Name</h6>
 
                                                     <div>
-                                                        <input class="form-control" type="text" name="firstname">
+                                                        <input class="form-control" type="text" name="firstname" readonly>
                                                     </div>
 
                                                 </div>
@@ -146,7 +178,7 @@
                                                     <h6 style="color: gray;">Other Name</h6>
 
                                                     <div>
-                                                        <input class="form-control" type="text" name="othernames">
+                                                        <input class="form-control" type="text" name="othernames" readonly>
                                                     </div>
 
                                                 </div>
@@ -167,7 +199,7 @@
                                                     <h6 style="color: gray;">Date of Birth</h6>
 
                                                     <div>
-                                                        <input class="form-control" type="date" name="dob">
+                                                        <input class="form-control" type="date" name="dob" readonly>
                                                     </div>
 
                                                 </div>
@@ -181,7 +213,7 @@
                                                     <h6 style="color: gray;">Phone Number</h6>
 
                                                     <div>
-                                                        <input class="form-control" type="text" name="phoneno">
+                                                        <input class="form-control" type="text" name="phoneno" readonly>
                                                     </div>
 
                                                 </div>
@@ -195,7 +227,7 @@
                                                     <h6 style="color: gray;">Email</h6>
 
                                                     <div>
-                                                        <input class="form-control" type="email" name="email">
+                                                        <input class="form-control" type="email" name="email" readonly>
                                                     </div>
 
                                                 </div>
@@ -217,7 +249,7 @@
                                                     <h6 style="color: gray;">Employment Status</h6>
 
                                                     <div>
-                                                        <select class="form-control">
+                                                        <select class="form-control" readonly>
                                                             <option>--- Select Employment Status --- </option>
                                                             <option>Self Employed</option>
                                                             <option>Employed</option>
@@ -236,7 +268,7 @@
                                                     <h6 style="color: gray;">Address</h6>
 
                                                     <div>
-                                                        <textarea class="form-control" rows="3"></textarea>
+                                                        <textarea class="form-control" rows="3" readonly></textarea>
                                                     </div>
 
                                                 </div>
@@ -261,9 +293,61 @@
 
                                         </div>
 
+                                        <hr>
+
 
                                         <!-- 4TH ROW OF 2ND HALF -->
                                         <div class="row">
+
+                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                <div class="box-card-alt">
+
+                                                    <h6 style="color: gray;">Loan Amount</h6>
+
+                                                    <div>
+                                                        <input class="form-control" type="number" name="loan-amount">
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                <div class="box-card-alt">
+
+                                                    <h6 style="color: gray;">Duration (months)</h6>
+
+                                                    <div>
+                                                        <input class="form-control" type="number" name="duration">
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                <div class="box-card-alt">
+
+                                                    <h6 style="color: gray;">Interest Rate</h6>
+
+                                                    <div>
+                                                        <input class="form-control" type="number" name="interest">
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </div>
+                                        
+
+                                        <!-- 5TH ROW OF 2ND HALF -->
+                                        <div class="row" style="padding-left: 20px;">
 
                                             <input type="submit" class="btn green-button">
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create Customer</title>
+    <title>New Loan request</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/sidebar.css" />
     <script src="js/jquery-3.3.1.js"></script>
@@ -34,13 +34,13 @@
                         <li>
                             <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Loans</a>
                             <ul class="collapse list-unstyled" id="pageSubmenu">
-                                <li > <a href="loan-requests.html">Loan Requests</a> </li>
+                                <li class="active"> <a href="loan-requests.html">Loan Requests</a> </li>
                                 <li> <a href="manage-loans.html">Manage Loans</a> </li>
                             </ul>
                         </li>
                         <li> <a href="defaulters.html">Defaulters</a> </li>
                         <li> <a href="transactions.html">Transactions</a> </li>
-                        <li class="active"> <a href="customers.html">Customers</a> </li>
+                        <li> <a href="customers.html">Customers</a> </li>
                         <li> <a href="reporting.html">Reporting</a> </li>
                         <li> <a href="#">Logout</a> </li>
                     </ul>
@@ -67,7 +67,8 @@
                     <div class="content-wrapper">
 
                         <div class="menu-heading">
-                            <h1 style="font-weight: 700; color: black;">Create Customer</h1>
+                            <h1 style="font-weight: 700; color: black;">New Loan Request</h1>
+                            <a href="new-loan-request-existing-customers.html" class="btn blue-button">Click Here for Existing Customers</a>
                         </div>
 
                         <div class="row" style="padding-left: 50px;">
@@ -75,22 +76,43 @@
                             <!-- LEFT SIDE -->
 
                             <div class="col-md-12 col-lg-3 col-sm-12 col-xs-12 profile-box" style="padding: 25px;">
-                                <p class="text-center" style="color: black; font-size: 22px; font-weight: 500;">Upload Picture</p>
-                                <img src="images/avatar.png" class="d-block mx-auto img-fluid">
+                                <p class="text-center" style="color: black; font-size: 22px; font-weight: 500;">Select Loan Type</p>
 
                                 <hr>
 
-                                <form>
-                                    <div>
-                                        <input class="form-control" type="file" name="file" />
+                                <div class="row" style="margin-top: 30px;">
+
+                                    <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 style="color: gray;">Loan Option A</h6>
+
+                                        </div>
+
                                     </div>
 
-                                    <div style="margin-top: 10px;">
-                                        <input class="btn btn-block blue-button" type="submit" value="Upload" />
+                                    <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+
+                                        <div class="box-card">
+
+                                            <h6 style="color: gray;">Loan Option B</h6>
+
+                                        </div>
+
                                     </div>
 
+                                    <div class="col-12 col-lg-12 col-md-12 col-sm-12">
 
-                                </form>
+                                        <div class="box-card">
+
+                                            <h6 style="color: gray;">Loan Option C</h6>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
 
 
 
@@ -261,9 +283,61 @@
 
                                         </div>
 
+                                        <hr>
+
 
                                         <!-- 4TH ROW OF 2ND HALF -->
                                         <div class="row">
+
+                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                <div class="box-card-alt">
+
+                                                    <h6 style="color: gray;">Loan Amount</h6>
+
+                                                    <div>
+                                                        <input class="form-control" type="number" name="loan-amount">
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                <div class="box-card-alt">
+
+                                                    <h6 style="color: gray;">Duration (months)</h6>
+
+                                                    <div>
+                                                        <input class="form-control" type="number" name="duration">
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                <div class="box-card-alt">
+
+                                                    <h6 style="color: gray;">Interest Rate</h6>
+
+                                                    <div>
+                                                        <input class="form-control" type="number" name="interest">
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                        <!-- 5TH ROW OF 2ND HALF -->
+                                        <div class="row" style="padding-left: 20px;">
 
                                             <input type="submit" class="btn green-button">
 
