@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balance Sheet</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/mCustomScrollbar.concat.min.js"></script>
+    <script src="js/chart.bundle.js"></script>
+    <script src="js/solid.js"></script>
+    <script src="js/fontawesome5.js"></script>
+
+
+</head>
+
+<body>
+
+
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="logo-style">
+                    <img src="images/logo.png" class="d-block mx-auto" width="100" height="100"/>
+                </div>
+
+                <div class="sidebar-nav">
+
+                    <ul class="list-unstyled components">
+
+                        <li> <a href="admin-dashboard.html">Dashboard</a> </li>
+                        <li>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Loans</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li> <a href="loan-requests.html">Loan Requests</a> </li>
+                                <li> <a href="manage-loans.html">Manage Loans</a> </li>
+                            </ul>
+                        </li>
+                        <li> <a href="defaulters.html">Defaulters</a> </li>
+                        <li> <a href="transactions.html">Transactions</a> </li>
+                        <li class="active"> <a href="balance-sheet.html">Balance Sheet</a> </li>
+                        <li> <a href="customers.html">Customers</a> </li>
+                        <li> <a href="reporting.html">Reporting</a> </li>
+                        <li> <a href="#">Logout</a> </li>
+
+                    </ul>
+
+                </div>
+
+
+
+            </nav>
+
+
+
+            <!-- Page Content  -->
+            <div id="content">
+
+                <div>
+                    <div class="col-lg-12" style="width: 100%; height: 50px; background: #F2F2F2;">
+                        <button type="button" id="sidebarCollapse" class="btn blue-button" style="margin-top: 8px;">
+                            <i class="fas fa-align-left"></i>
+                            <!--<span>Toggle Sidebar</span>-->Toggle Menu
+                        </button>
+                    </div>
+
+                    <div class="content-wrapper">
+
+                        <div class="menu-heading">
+                            <h1 style="font-weight: 700; color: black;">Balance Sheet</h1>
+                        </div>
+
+
+
+                        <div class="row" style="padding: 0px 10px;">
+
+                            <div class="col-12 col-lg-12 col-md-12 col-sm-12 filter-div">
+                                <form>
+
+                                    <span>From: </span>
+                                    <input type="date">
+
+                                    <span>To: </span>
+                                    <input type="date">
+
+                                    <input class="green-button" type="submit" value="Search">
+                                </form>
+                            </div>
+
+                            <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+
+
+                                <div class="flex-container">
+
+
+                                    <div class="balance-sheet div-table">
+                                        <div class="title text-center">
+                                            <h3>Balance Sheet of the Year</h3>
+                                            <p style="font-size: 16px; font-weight: 500;">13TH DECEMBER, 2018</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="col left">
+                                                <div class="section asset">
+                                                    <div class="header tool" name="asset">Assets</div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name-head" style="color: black; font-weight: 500;">Current Assets</div>
+                                                        <div class="value"></div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Cash</div>
+                                                        <div class="value">11,400,050</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Petty Cash</div>
+                                                        <div class="value">12,900,150</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Temporary Investment</div>
+                                                        <div class="value">12,000,050</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Inventory</div>
+                                                        <div class="value">2,150,000</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Supplies</div>
+                                                        <div class="value">5,500,000</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Prepaid Insurance</div>
+                                                        <div class="value">12,000,050</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Total Current Assets</div>
+                                                        <div class="value">95,000,050</div>
+                                                    </div>
+
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name-head" style="color: black; font-weight: 500;">Investments</div>
+                                                        <div class="value"></div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Investments</div>
+                                                        <div class="value">3,500,750</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name-head" style="color: black; font-weight: 500;">Property</div>
+                                                        <div class="value"></div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Land</div>
+                                                        <div class="value">25,700,000</div>
+                                                    </div>
+                                                    <div class="item tool" name="intangible">
+                                                        <div class="name">Land Improvements</div>
+                                                        <div class="value">11,900,100</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Buildings</div>
+                                                        <div class="value">50,000,000</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Total Property</div>
+                                                        <div class="value">86,000,000</div>
+                                                    </div>
+
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name-head" style="color: black; font-weight: 500;">Intangible Assets</div>
+                                                        <div class="value"></div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Goodwill</div>
+                                                        <div class="value">30,000,000</div>
+                                                    </div>
+                                                    <div class="item tool" name="intangible">
+                                                        <div class="name">Trade names</div>
+                                                        <div class="value">5,700,000</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Total Intangible Assets</div>
+                                                        <div class="value">35,700,000</div>
+                                                    </div>
+                                                </div>
+                                                <div class="section total">
+                                                    <div class="item">
+                                                        <div class="name">Total Assets</div>
+                                                        <div class="value">250</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col right">
+                                                <div class="section liabilities">
+                                                    <div class="header tool" name="liabilities">Liabilities</div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name-head" style="color: black; font-weight: 500;">Current Liabilities</div>
+                                                        <div class="value"></div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Notes Payable</div>
+                                                        <div class="value">11,400,050</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Accounts Payable</div>
+                                                        <div class="value">12,900,150</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Wages Payable</div>
+                                                        <div class="value">12,000,050</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Interest Payable</div>
+                                                        <div class="value">2,150,000</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Taxes Payable</div>
+                                                        <div class="value">5,500,000</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Unearned Revenue</div>
+                                                        <div class="value">12,000,050</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Total Current Liabilities</div>
+                                                        <div class="value">95,000,050</div>
+                                                    </div>
+
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name-head" style="color: black; font-weight: 500;">Long Term Liabilities</div>
+                                                        <div class="value"></div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Notes Payable</div>
+                                                        <div class="value">11,400,050</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Bonds Payable</div>
+                                                        <div class="value">12,900,150</div>
+                                                    </div>
+                                                    <div class="item tool" name="tangible">
+                                                        <div class="name">Total Long Term Liabilities</div>
+                                                        <div class="value">12,000,050</div>
+                                                    </div>
+                                                    <div class="section total">
+                                                        <div class="item">
+                                                            <div class="name">Total Liabilities</div>
+                                                            <div class="value">250</div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="section stockholders">
+                                                    <div class="header tool" name="stockholders">Stockholders Equity</div>
+                                                    <div class="item tool" name="stock">
+                                                        <div class="name">Stock</div>
+                                                        <div class="value">125</div>
+                                                    </div>
+                                                    <div class="item tool" name="retainedEarning">
+                                                        <div class="name">Retained Earnings</div>
+                                                        <div class="value">58</div>
+                                                    </div>
+                                                </div>
+                                                <div class="section total">
+                                                    <div class="item">
+                                                        <div class="name">Total Liabilities and Stock Holders Equity</div>
+                                                        <div class="value">250</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+
+
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
+
+
+</body>
+</html>

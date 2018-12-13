@@ -423,3 +423,180 @@ table {
         display: none;
     }
 }
+
+
+/*BALANCE SHEET*/
+.flex-container {
+    margin: 3% 0;
+    width: 100%;
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    /*align-items: center;*/
+    /*align-self: stretch;*/
+}
+
+/*.balance-sheet {*/
+    /*min-width: 650px;*/
+/*}*/
+
+/*.income-statement {*/
+    /*min-width: 450px;*/
+/*}*/
+
+.balance-sheet, .income-statement {
+    min-height: 300px;
+    margin: 0 auto;
+    background-color: #fefefe;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    /*flex: flex-grow 0 0 50%;*/
+}
+.balance-sheet table, .income-statement table {
+    width: 100%;
+    padding: 10px;
+}
+.balance-sheet table td, .income-statement table td {
+    padding: 5px;
+}
+.balance-sheet table td.positive, .income-statement table td.positive {
+    color: #a5d3a2 !important;
+}
+.balance-sheet table td.negative, .income-statement table td.negative {
+    color: #f28973 !important;
+}
+.balance-sheet table tr td:nth-child(even), .income-statement table tr td:nth-child(even) {
+    color: #afb0b5;
+    text-align: right;
+}
+.balance-sheet .header th, .income-statement .header th {
+    padding: 20px;
+    color: #586078;
+    font-size: 140%;
+    text-transform: uppercase;
+}
+.balance-sheet .sub-header th, .income-statement .sub-header th {
+    padding: 15px 5px;
+    text-align: left;
+    border-top: 1px solid #CCC;
+    text-transform: uppercase;
+}
+.balance-sheet .sub-total td, .income-statement .sub-total td {
+    padding: 20px 5px;
+    font-weight: bold;
+    border-top: 1px solid #CCC;
+}
+
+/*.tool:hover {*/
+    /*background-color: #ffe07d;*/
+    /*cursor: pointer;*/
+/*}*/
+
+.tooltip {
+    position: absolute;
+    display: none;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: normal;
+    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.5);
+    max-width: 200px;
+}
+
+.div-table {
+    padding: 15px;
+    box-sizing: border-box;
+}
+.div-table .title {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    border-bottom: 1px solid #e3e7ea;
+    padding: 0 10px;
+}
+.div-table .title h3 {
+    color: #586078;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    font-weight: 500;
+    margin: 10px 0 0 0;
+}
+.div-table .title p {
+    font-size: 10px;
+}
+.div-table .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+.div-table .content .col-full {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+}
+.div-table .content .col {
+    bottom: 0;
+    margin: 0 0px;
+    flex-basis: 50%;
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.div-table .content .col + .col {
+    margin-left: 10px;
+}
+.div-table .content .section {
+    width: 100%;
+    margin: 5px 0;
+    align-self: flex-start;
+}
+.div-table .content .section.total {
+    border-top: 1px solid #e3e7ea;
+    font-weight: 600;
+    align-self: flex-end;
+    padding: 10px 0 0 0;
+}
+.div-table .content .section + .section {
+    border-top: 1px solid #e3e7ea;
+}
+.div-table .content .section div {
+    line-height: 1.5em;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.div-table .content .section .header {
+    font-weight: 700;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.div-table .content .section .item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.div-table .content .section .name-head {
+    float: left;
+}
+
+.div-table .content .section .name {
+    float: left;
+    padding-left: 30px;
+}
+.div-table .content .section .value {
+    float: right;
+    color: #afb0b5;
+}
+
+.positive {
+    color: #a5d3a2 !important;
+}
+
+.negative {
+    color: #f28973 !important;
+}
