@@ -68,216 +68,1135 @@
                     <div class="content-wrapper">
 
                         <div class="menu-heading">
-                            <h1 style="font-weight: 700; color: black;">Create Customer</h1>
-                        </div>
 
-                        <div class="row" style="padding-left: 50px;">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <h1 style="font-weight: 700; color: black; display: inline-block">Create Customer</h1>
+                                </div>
 
-                            <!-- LEFT SIDE -->
-
-                            <div class="col-md-12 col-lg-3 col-sm-12 col-xs-12 profile-box" style="padding: 25px;">
-                                <p class="text-center" style="color: black; font-size: 22px; font-weight: 500;">Upload Picture</p>
-                                <img src="images/avatar.png" class="d-block mx-auto img-fluid">
-
-                                <hr>
-
-                                <form>
-                                    <div>
-                                        <input class="form-control" type="file" name="file" />
-                                    </div>
-
-                                    <div style="margin-top: 10px;">
-                                        <input class="btn btn-block blue-button" type="submit" value="Upload" />
-                                    </div>
-
-
-                                </form>
-
-
+                                <div class="col-12 col-lg-6">
+                                    <a href="#" class="btn blue-button float-lg-right" data-toggle="modal" data-target="#createField"><i class="fas fa-plus"></i> Add New Field</a>
+                                    <span class="float-lg-right" style="padding: 0px 5px">&nbsp;</span>
+                                    <a href="#" class="btn blue-button float-lg-right" data-toggle="modal" data-target="#createSection"><i class="fas fa-plus"></i> Add New Section</a>
+                                </div>
 
 
                             </div>
 
-                            <div style="padding: 0 10px;"></div>
+                        </div>
+
+                        <div class="row" style="padding-left: 50px;">
 
                             <!-- RIGHT SIDE -->
 
-                            <div class="col-md-12 col-lg-8 col-sm-12 col-xs-12 profile-box-flat" style="padding: 25px;">
+                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 profile-box-flat" style="padding: 25px;">
 
-                                <div class="tab-pane fade show active" id="pills-overview-tab" role="tabpanel" aria-labelledby="pills-overview">
+                                <div>
+                                    <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="pills-personal-info" href="#pills-personal-info-content" data-toggle="pill" role="tab" aria-controls="pills-personal-info" aria-selected="true">
+                                                Personal Information
+                                            </a>
+                                        </li>
 
-                                    <!-- 1ST ROW OF 2ND HALF -->
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-contact-details" data-toggle="pill" href="#pills-contact-details-tab" role="tab" aria-controls="pills-contact-details" aria-selected="false">
+                                                Contact Details
+                                            </a>
+                                        </li>
 
-                                    <form>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-employment-details" data-toggle="pill" href="#pills-employment-details-tab" role="tab" aria-controls="pills-employment-details" aria-selected="false">
+                                                Employment Details
+                                            </a>
+                                        </li>
 
-                                        <div class="row" style="margin-top: 30px;">
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-next-of-kin" data-toggle="pill" href="#pills-next-of-kin-tab" role="tab" aria-controls="pills-next-of-kin" aria-selected="false">
+                                                Next of Kin Details
+                                            </a>
+                                        </li>
 
-                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-upload-details" data-toggle="pill" href="#pills-upload-details-tab" role="tab" aria-controls="pills-upload-details" aria-selected="false">
+                                                Documents
+                                            </a>
+                                        </li>
 
-                                                <div class="box-card-alt">
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-add-new-tab" data-toggle="pill" href="#pills-add-new-tab-tab" role="tab" aria-controls="pills-add-new-tab" aria-selected="false">
+                                                <i class="fas fa-plus" style="color: #627CF6;"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
 
-                                                    <h6 style="color: gray;">Surname</h6>
+                                    <div class="tab-content" id="pills-tabContent">
 
-                                                    <div>
-                                                        <input class="form-control" type="text" name="surname">
+                                        <!-- PERSONAL DETAILS TAB -->
+                                        <div class="tab-pane fade show active" id="pills-personal-info-content" role="tabpanel" aria-labelledby="pills-overview">
+
+                                            <hr>
+
+                                            <!--<div class="row">-->
+
+                                                <form>
+
+                                                    <!-- 1ST ROW -->
+                                                    <div class="row">
+
+                                                        <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                            <div class="box-card-alt">
+
+                                                                <h6 style="color: gray;">Title</h6>
+
+                                                                <div>
+                                                                    <select class="form-control">
+                                                                        <option>--- Select Title Status --- </option>
+                                                                        <option>Mr</option>
+                                                                        <option>Mrs</option>
+                                                                        <option>Miss</option>
+                                                                        <option>Ms</option>
+                                                                    </select>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                            <div class="box-card-alt">
+
+                                                                <h6 style="color: gray;">Surname</h6>
+
+                                                                <div>
+                                                                    <input class="form-control" type="text" name="surname">
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                            <div class="box-card-alt">
+
+                                                                <h6 style="color: gray;">First Name</h6>
+
+                                                                <div>
+                                                                    <input class="form-control" type="text" name="firstname">
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+
                                                     </div>
 
-                                                </div>
+                                                    <hr>
+
+                                                    <!-- 2ND ROW -->
+                                                    <div class="row">
+
+                                                        <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                            <div class="box-card-alt">
+
+                                                                <h6 style="color: gray;">Other Name</h6>
+
+                                                                <div>
+                                                                    <input class="form-control" type="text" name="othernames">
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                            <div class="box-card-alt">
+
+                                                                <h6 style="color: gray;">Mother's Maiden Name</h6>
+
+                                                                <div>
+                                                                    <input class="form-control" type="text" name="mothermaidenname">
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                            <div class="box-card-alt">
+
+                                                                <h6 style="color: gray;">Marital Status</h6>
+
+                                                                <div>
+                                                                    <select class="form-control">
+                                                                        <option>--- Select Marital Status --- </option>
+                                                                        <option>Single</option>
+                                                                        <option>Married</option>
+                                                                        <option>Divorce</option>
+                                                                        <option>Widow</option>
+                                                                        <option>Widower</option>
+                                                                    </select>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <hr>
+
+                                                    <!-- 3RD ROW -->
+                                                    <div class="row">
+
+                                                        <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                            <div class="box-card-alt">
+
+                                                                <h6 style="color: gray;">Gender</h6>
+
+                                                                <div>
+                                                                    <select class="form-control">
+                                                                        <option>--- Select Gender --- </option>
+                                                                        <option>Male</option>
+                                                                        <option>Female</option>
+                                                                    </select>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                            <div class="box-card-alt">
+
+                                                                <h6 style="color: gray;">Date of Birth</h6>
+
+                                                                <div>
+                                                                    <input class="form-control" type="date" name="dob">
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                            <div class="box-card-alt">
+
+                                                                <h6 style="color: gray;">State of Origin</h6>
+
+                                                                <div>
+                                                                    <select class="form-control">
+                                                                        <option>--- Select State of Origin --- </option>
+                                                                        <option value="Abuja FCT">Abuja FCT</option>
+                                                                        <option value="Abia">Abia</option>
+                                                                        <option value="Adamawa">Adamawa</option>
+                                                                        <option value="Akwa Ibom">Akwa Ibom</option>
+                                                                        <option value="Anambra">Anambra</option>
+                                                                        <option value="Bauchi">Bauchi</option>
+                                                                        <option value="Bayelsa">Bayelsa</option>
+                                                                        <option value="Benue">Benue</option>
+                                                                        <option value="Borno">Borno</option>
+                                                                        <option value="Cross River">Cross River</option>
+                                                                        <option value="Delta">Delta</option>
+                                                                        <option value="Ebonyi">Ebonyi</option>
+                                                                        <option value="Edo">Edo</option>
+                                                                        <option value="Ekiti">Ekiti</option>
+                                                                        <option value="Enugu">Enugu</option>
+                                                                        <option value="Gombe">Gombe</option>
+                                                                        <option value="Imo">Imo</option>
+                                                                        <option value="Jigawa">Jigawa</option>
+                                                                        <option value="Kaduna">Kaduna</option>
+                                                                        <option value="Kano">Kano</option>
+                                                                        <option value="Katsina">Katsina</option>
+                                                                        <option value="Kebbi">Kebbi</option>
+                                                                        <option value="Kogi">Kogi</option>
+                                                                        <option value="Kwara">Kwara</option>
+                                                                        <option value="Lagos">Lagos</option>
+                                                                        <option value="Nassarawa">Nassarawa</option>
+                                                                        <option value="Niger">Niger</option>
+                                                                        <option value="Ogun">Ogun</option>
+                                                                        <option value="Ondo">Ondo</option>
+                                                                        <option value="Osun">Osun</option>
+                                                                        <option value="Oyo">Oyo</option>
+                                                                        <option value="Plateau">Plateau</option>
+                                                                        <option value="Rivers">Rivers</option>
+                                                                        <option value="Sokoto">Sokoto</option>
+                                                                        <option value="Taraba">Taraba</option>
+                                                                        <option value="Yobe">Yobe</option>
+                                                                        <option value="Zamfara">Zamfara</option>
+                                                                        <option value="Outside Nigeria">Outside Nigeria</option>
+                                                                    </select>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <hr>
+
+
+                                                    <!-- 4TH ROW OF 2ND HALF -->
+                                                    <div class="row float-lg-right" style="padding-right: 20px;">
+                                                        <a href="#" class="btn green-button" id="moveToContact" name="moveToContact">Next</a>
+                                                    </div>
+
+
+                                                </form>
+
 
                                             </div>
 
-                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
 
-                                                <div class="box-card-alt">
+                                        <!-- CONTACT TAB -->
+                                        <div class="tab-pane fade" id="pills-contact-details-tab" role="tabpanel" aria-labelledby="pills-contact-details">
 
-                                                    <h6 style="color: gray;">First Name</h6>
+                                            <hr>
 
-                                                    <div>
-                                                        <input class="form-control" type="text" name="firstname">
+                                            <form>
+
+
+                                                <!-- 1ST ROW -->
+                                                <div class="row">
+
+                                                    <div class="col-12 col-lg-2 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Street Number</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="streetmo">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Street Name</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="streetname">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Nearest Landmark</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="landmark">
+                                                            </div>
+
+                                                        </div>
+
                                                     </div>
 
                                                 </div>
 
-                                            </div>
+                                                <hr>
 
-                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+                                                <!-- 2ND ROW -->
+                                                <div class="row">
 
-                                                <div class="box-card-alt">
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
 
-                                                    <h6 style="color: gray;">Other Name</h6>
+                                                        <div class="box-card-alt">
 
-                                                    <div>
-                                                        <input class="form-control" type="text" name="othernames">
+                                                            <h6 style="color: gray;">City / Town</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="city">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">State</h6>
+
+                                                            <div>
+                                                                <select class="form-control">
+                                                                    <option>--- Select State of Origin --- </option>
+                                                                    <option value="Abuja FCT">Abuja FCT</option>
+                                                                    <option value="Abia">Abia</option>
+                                                                    <option value="Adamawa">Adamawa</option>
+                                                                    <option value="Akwa Ibom">Akwa Ibom</option>
+                                                                    <option value="Anambra">Anambra</option>
+                                                                    <option value="Bauchi">Bauchi</option>
+                                                                    <option value="Bayelsa">Bayelsa</option>
+                                                                    <option value="Benue">Benue</option>
+                                                                    <option value="Borno">Borno</option>
+                                                                    <option value="Cross River">Cross River</option>
+                                                                    <option value="Delta">Delta</option>
+                                                                    <option value="Ebonyi">Ebonyi</option>
+                                                                    <option value="Edo">Edo</option>
+                                                                    <option value="Ekiti">Ekiti</option>
+                                                                    <option value="Enugu">Enugu</option>
+                                                                    <option value="Gombe">Gombe</option>
+                                                                    <option value="Imo">Imo</option>
+                                                                    <option value="Jigawa">Jigawa</option>
+                                                                    <option value="Kaduna">Kaduna</option>
+                                                                    <option value="Kano">Kano</option>
+                                                                    <option value="Katsina">Katsina</option>
+                                                                    <option value="Kebbi">Kebbi</option>
+                                                                    <option value="Kogi">Kogi</option>
+                                                                    <option value="Kwara">Kwara</option>
+                                                                    <option value="Lagos">Lagos</option>
+                                                                    <option value="Nassarawa">Nassarawa</option>
+                                                                    <option value="Niger">Niger</option>
+                                                                    <option value="Ogun">Ogun</option>
+                                                                    <option value="Ondo">Ondo</option>
+                                                                    <option value="Osun">Osun</option>
+                                                                    <option value="Oyo">Oyo</option>
+                                                                    <option value="Plateau">Plateau</option>
+                                                                    <option value="Rivers">Rivers</option>
+                                                                    <option value="Sokoto">Sokoto</option>
+                                                                    <option value="Taraba">Taraba</option>
+                                                                    <option value="Yobe">Yobe</option>
+                                                                    <option value="Zamfara">Zamfara</option>
+                                                                    <option value="Outside Nigeria">Outside Nigeria</option>
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Email</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="email" name="email">
+                                                            </div>
+
+                                                        </div>
+
                                                     </div>
 
                                                 </div>
+
+                                                <hr>
+
+
+                                                <!-- 3RD ROW -->
+                                                <div class="row">
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Phone Number</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="phoneno">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </div>
+
+
+                                                <!-- 4TH ROW -->
+                                                    <div class="row" style="padding-right: 20px;">
+                                                        <div class="col-6 col-lg-6 float-lg-left">
+                                                            <a href="#" class=" btn green-button" id="backToPersonalInfo" name="backToPersonalInfo">Previous</a>
+                                                        </div>
+
+                                                        <div class="col-6 col-lg-6 float-right">
+                                                            <a href="#" class="float-right btn green-button" id="moveToEmployment" name="moveToEmployment">Next</a>
+                                                        </div>
+
+                                                    </div>
+
+
+                                            </form>
+
+                                        </div>
+
+                                        <!-- EMPLOYMENT DETAILS TAB -->
+                                        <div class="tab-pane fade" id="pills-employment-details-tab" role="tabpanel" aria-labelledby="pills-employment-details">
+
+                                            <hr>
+
+                                            <form>
+
+                                                <!-- 1ST ROW -->
+
+                                                <div class="row">
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Employment Status</h6>
+
+                                                            <div>
+                                                                <select class="form-control">
+                                                                    <option>--- Select Employment Status --- </option>
+                                                                    <option>Employed</option>
+                                                                    <option>Self Employed</option>
+                                                                    <option>Unemployed</option>
+                                                                    <option>Retired</option>
+                                                                    <option>Student</option>
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Employer's Name</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="employer-name">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Date of Employment</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="date" name="dob">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <hr>
+
+                                                <!-- 2ND ROW -->
+                                                <div class="row">
+
+                                                    <div class="col-12 col-lg-2 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Street Number</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="streetmo">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Street Name</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="streetname">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Nearest Landmark</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="landmark">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <hr>
+
+                                                <!-- 3RD ROW -->
+                                                <div class="row">
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">City / Town</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="city">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">State</h6>
+
+                                                            <div>
+                                                                <select class="form-control">
+                                                                    <option>--- Select State of Origin --- </option>
+                                                                    <option value="Abuja FCT">Abuja FCT</option>
+                                                                    <option value="Abia">Abia</option>
+                                                                    <option value="Adamawa">Adamawa</option>
+                                                                    <option value="Akwa Ibom">Akwa Ibom</option>
+                                                                    <option value="Anambra">Anambra</option>
+                                                                    <option value="Bauchi">Bauchi</option>
+                                                                    <option value="Bayelsa">Bayelsa</option>
+                                                                    <option value="Benue">Benue</option>
+                                                                    <option value="Borno">Borno</option>
+                                                                    <option value="Cross River">Cross River</option>
+                                                                    <option value="Delta">Delta</option>
+                                                                    <option value="Ebonyi">Ebonyi</option>
+                                                                    <option value="Edo">Edo</option>
+                                                                    <option value="Ekiti">Ekiti</option>
+                                                                    <option value="Enugu">Enugu</option>
+                                                                    <option value="Gombe">Gombe</option>
+                                                                    <option value="Imo">Imo</option>
+                                                                    <option value="Jigawa">Jigawa</option>
+                                                                    <option value="Kaduna">Kaduna</option>
+                                                                    <option value="Kano">Kano</option>
+                                                                    <option value="Katsina">Katsina</option>
+                                                                    <option value="Kebbi">Kebbi</option>
+                                                                    <option value="Kogi">Kogi</option>
+                                                                    <option value="Kwara">Kwara</option>
+                                                                    <option value="Lagos">Lagos</option>
+                                                                    <option value="Nassarawa">Nassarawa</option>
+                                                                    <option value="Niger">Niger</option>
+                                                                    <option value="Ogun">Ogun</option>
+                                                                    <option value="Ondo">Ondo</option>
+                                                                    <option value="Osun">Osun</option>
+                                                                    <option value="Oyo">Oyo</option>
+                                                                    <option value="Plateau">Plateau</option>
+                                                                    <option value="Rivers">Rivers</option>
+                                                                    <option value="Sokoto">Sokoto</option>
+                                                                    <option value="Taraba">Taraba</option>
+                                                                    <option value="Yobe">Yobe</option>
+                                                                    <option value="Zamfara">Zamfara</option>
+                                                                    <option value="Outside Nigeria">Outside Nigeria</option>
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Nature of Business</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="natureOfBusiness">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <hr>
+
+
+                                                <!-- 4TH ROW -->
+                                                <div class="row">
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Phone Number</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="phoneno">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </div>
+
+
+                                                <!-- 5TH ROW -->
+                                                <div class="row" style="padding-right: 20px;">
+                                                    <div class="col-6 col-lg-6 float-lg-left">
+                                                        <a href="#" class=" btn green-button" id="backToContactDetails" name="backToContactDetails">Previous</a>
+                                                    </div>
+
+                                                    <div class="col-6 col-lg-6 float-right">
+                                                        <a href="#" class="float-right btn green-button" id="moveToNextOfKin" name="moveToNextOfKin">Next</a>
+                                                    </div>
+
+                                                </div>
+
+
+                                            </form>
+
+                                        </div>
+
+                                        <!-- NEXT OF KIN DETAILS TAB -->
+                                        <div class="tab-pane fade" id="pills-next-of-kin-tab" role="tabpanel" aria-labelledby="pills-next-of-kin">
+
+                                            <hr>
+
+                                            <form>
+
+                                                <!-- 1ST ROW -->
+                                                <div class="row">
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Title</h6>
+
+                                                            <div>
+                                                                <select class="form-control">
+                                                                    <option>--- Select Title Status --- </option>
+                                                                    <option>Mr</option>
+                                                                    <option>Mrs</option>
+                                                                    <option>Miss</option>
+                                                                    <option>Ms</option>
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Surname</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="surname">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">First Name</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="firstname">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </div>
+
+                                                <hr>
+
+                                                <!-- 2ND ROW -->
+                                                <div class="row">
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Other Name</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="othernames">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Relationship</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="mothermaidenname">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Marital Status</h6>
+
+                                                            <div>
+                                                                <select class="form-control">
+                                                                    <option>--- Select Marital Status --- </option>
+                                                                    <option>Single</option>
+                                                                    <option>Married</option>
+                                                                    <option>Divorce</option>
+                                                                    <option>Widow</option>
+                                                                    <option>Widower</option>
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <hr>
+
+                                                <!-- 3RD ROW -->
+                                                <div class="row">
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Gender</h6>
+
+                                                            <div>
+                                                                <select class="form-control">
+                                                                    <option>--- Select Gender --- </option>
+                                                                    <option>Male</option>
+                                                                    <option>Female</option>
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Date of Birth</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="date" name="dob">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">State of Origin</h6>
+
+                                                            <div>
+                                                                <select class="form-control">
+                                                                    <option>--- Select State of Origin --- </option>
+                                                                    <option value="Abuja FCT">Abuja FCT</option>
+                                                                    <option value="Abia">Abia</option>
+                                                                    <option value="Adamawa">Adamawa</option>
+                                                                    <option value="Akwa Ibom">Akwa Ibom</option>
+                                                                    <option value="Anambra">Anambra</option>
+                                                                    <option value="Bauchi">Bauchi</option>
+                                                                    <option value="Bayelsa">Bayelsa</option>
+                                                                    <option value="Benue">Benue</option>
+                                                                    <option value="Borno">Borno</option>
+                                                                    <option value="Cross River">Cross River</option>
+                                                                    <option value="Delta">Delta</option>
+                                                                    <option value="Ebonyi">Ebonyi</option>
+                                                                    <option value="Edo">Edo</option>
+                                                                    <option value="Ekiti">Ekiti</option>
+                                                                    <option value="Enugu">Enugu</option>
+                                                                    <option value="Gombe">Gombe</option>
+                                                                    <option value="Imo">Imo</option>
+                                                                    <option value="Jigawa">Jigawa</option>
+                                                                    <option value="Kaduna">Kaduna</option>
+                                                                    <option value="Kano">Kano</option>
+                                                                    <option value="Katsina">Katsina</option>
+                                                                    <option value="Kebbi">Kebbi</option>
+                                                                    <option value="Kogi">Kogi</option>
+                                                                    <option value="Kwara">Kwara</option>
+                                                                    <option value="Lagos">Lagos</option>
+                                                                    <option value="Nassarawa">Nassarawa</option>
+                                                                    <option value="Niger">Niger</option>
+                                                                    <option value="Ogun">Ogun</option>
+                                                                    <option value="Ondo">Ondo</option>
+                                                                    <option value="Osun">Osun</option>
+                                                                    <option value="Oyo">Oyo</option>
+                                                                    <option value="Plateau">Plateau</option>
+                                                                    <option value="Rivers">Rivers</option>
+                                                                    <option value="Sokoto">Sokoto</option>
+                                                                    <option value="Taraba">Taraba</option>
+                                                                    <option value="Yobe">Yobe</option>
+                                                                    <option value="Zamfara">Zamfara</option>
+                                                                    <option value="Outside Nigeria">Outside Nigeria</option>
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </div>
+
+                                                <hr>
+
+                                                <!-- 4TH ROW -->
+                                                <div class="row">
+
+                                                    <div class="col-12 col-lg-2 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Street Number</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="streetmo">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Street Name</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="streetname">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Nearest Landmark</h6>
+
+                                                            <div>
+                                                                <input class="form-control" type="text" name="landmark">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <hr>
+
+
+                                                <!-- 5TH ROW -->
+                                                <div class="row" style="padding-right: 20px;">
+                                                    <div class="col-6 col-lg-6 float-lg-left">
+                                                        <a href="#" class=" btn green-button" id="backToEmploymentDetails" name="backToEmploymentDetails">Previous</a>
+                                                    </div>
+
+                                                    <div class="col-6 col-lg-6 float-right">
+                                                        <a href="#" class="float-right btn green-button" id="moveToDocumentDetails" name="moveToDocumentDetails">Next</a>
+                                                    </div>
+
+                                                </div>
+
+
+                                            </form>
+
+                                        </div>
+
+                                        <!-- DOCUMENT DETAILS TAB -->
+                                        <div class="tab-pane fade" id="pills-upload-details-tab" role="tabpanel" aria-labelledby="pills-upload-details">
+
+                                            <hr>
+
+                                            <form>
+
+                                                <!-- 1ST ROW -->
+                                                <div class="row">
+
+                                                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">Document Type</h6>
+
+                                                            <div>
+                                                                <select class="form-control">
+                                                                    <option>--- Select Document Type ---</option>
+                                                                    <option>National ID Card</option>
+                                                                    <option>Driver's License</option>
+                                                                    <option>International Passport</option>
+                                                                    <option>Employment Letter</option>
+                                                                    <option>Others</option>
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-3 col-md-12 col-sm-12">
+
+                                                        <div class="box-card-alt">
+
+                                                            <h6 style="color: gray;">&nbsp;</h6>
+
+                                                            <div>
+                                                                <input class="form-control btn green-button" type="submit" value="Select to Upload">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </div>
+
+                                                <hr>
+
+                                            </form>
+
+                                            <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+
+                                                <div style="overflow: auto">
+
+                                                    <table class="table text-nowrap">
+                                                        <thead style="background-color: #627CF6; color: white;">
+                                                        <tr>
+                                                            <td>Sn</td>
+                                                            <td>File Type</td>
+                                                            <td>File Name</td>
+                                                            <td>Action</td>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+
+                                                        <tr class="fancy-table-alt">
+                                                            <td>1</td>
+                                                            <td>National ID Card</td>
+                                                            <td>id-card.png</td>
+                                                            <td><a class="btn btn-sm red-button" href="#">Remove</a></td>
+                                                        </tr>
+
+                                                        <tr class="fancy-table-alt">
+                                                            <td>1</td>
+                                                            <td>Driver's License</td>
+                                                            <td>drivers-license.png</td>
+                                                            <td><a class="btn btn-sm red-button" href="#">Remove</a></td>
+                                                        </tr>
+
+                                                        <tr class="fancy-table-alt">
+                                                            <td>1</td>
+                                                            <td>International Passport</td>
+                                                            <td>international-passport.png</td>
+                                                            <td><a class="btn btn-sm red-button" href="#">Remove</a></td>
+                                                        </tr>
+
+
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+
+                                                <hr>
+
+
+                                                <!-- 5TH ROW -->
+                                                <div class="row">
+
+                                                    <div class="row" style="padding-right: 20px;">
+                                                        <div class="col-6 col-lg-6 float-lg-left">
+                                                            <a href="#" class=" btn green-button" id="backToNextOfKin">Previous</a>
+                                                        </div>
+
+                                                        <div class="col-6 col-lg-6 float-right">
+                                                            <a href="#" class="float-right btn green-button">Submit</a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
 
                                             </div>
 
                                         </div>
 
-                                        <hr>
+                                        <!-- CREATE NEW TAB -->
+                                        <div class="tab-pane fade" id="pills-add-new-tab-tab" role="tabpanel" aria-labelledby="pills-add-new-tab">
 
-                                        <!-- 2ND ROW OF 2ND HALF -->
-                                        <div class="row">
+                                            <hr>
 
-                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
-
-                                                <div class="box-card-alt">
-
-                                                    <h6 style="color: gray;">Date of Birth</h6>
-
-                                                    <div>
-                                                        <input class="form-control" type="date" name="dob">
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
-
-                                                <div class="box-card-alt">
-
-                                                    <h6 style="color: gray;">Phone Number</h6>
-
-                                                    <div>
-                                                        <input class="form-control" type="text" name="phoneno">
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
-
-                                                <div class="box-card-alt">
-
-                                                    <h6 style="color: gray;">Email</h6>
-
-                                                    <div>
-                                                        <input class="form-control" type="email" name="email">
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-                                        <hr>
-
-
-                                        <!-- 3RD ROW OF 2ND HALF -->
-                                        <div class="row">
-
-                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
-
-                                                <div class="box-card-alt">
-
-                                                    <h6 style="color: gray;">Employment Status</h6>
-
-                                                    <div>
-                                                        <select class="form-control">
-                                                            <option>--- Select Employment Status --- </option>
-                                                            <option>Self Employed</option>
-                                                            <option>Employed</option>
-                                                            <option>Not Employed</option>
-                                                        </select>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
-
-                                                <div class="box-card-alt">
-
-                                                    <h6 style="color: gray;">Address</h6>
-
-                                                    <div>
-                                                        <textarea class="form-control" rows="3"></textarea>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="col-12 col-lg-4 col-md-12 col-sm-12">
-
-                                                <div class="box-card-alt">
-
-                                                    <h6 style="color: gray;">Upload Document</h6>
-
-                                                    <div>
-                                                        <input class="form-control" type="file" name="file">
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
+                                            Hello
 
                                         </div>
 
 
-                                        <!-- 4TH ROW OF 2ND HALF -->
-                                        <div class="row">
-
-                                            <input type="submit" class="btn green-button">
 
 
-
-                                        </div>
-
-
-                                    </form>
-
-
-
-
+                                    </div>
                                 </div>
 
 
@@ -296,6 +1215,228 @@
 
         </div>
 
+
+        <!-- Add New Section Modal -->
+        <div class="modal fade" id="createSection" tabindex="-1" role="dialog" aria-labelledby="createSection" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add New Section</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="padding-bottom: 30px;">
+                        <form>
+                            <div class="box-card-alt">
+
+                                <h6 style="color: gray;">Section Code</h6>
+
+                                <div>
+                                    <input class="form-control" type="text" name="sectionCode" id="sectionCode">
+                                </div>
+
+                            </div>
+
+                            <div class="box-card-alt">
+
+                                <h6 style="color: gray;">Section Description</h6>
+
+                                <div>
+                                    <input class="form-control" type="text" name="sectionDescription" id="sectionDescription">
+                                </div>
+
+                            </div>
+
+                            <input type="submit" class="btn blue-button float-right" value="Submit" />
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Add New Field Modal -->
+        <div class="modal fade" id="createField" tabindex="-1" role="dialog" aria-labelledby="createField" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add New Field</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="padding-bottom: 30px;">
+
+                        <div class="row">
+                            <div class="col-8">
+                                <form>
+                                    <div class="box-card-alt">
+
+                                        <h6 style="color: gray;">Field Name</h6>
+
+                                        <div>
+                                            <input class="form-control" type="text" name="fieldName" id="fieldName">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="box-card-alt">
+
+                                        <h6 style="color: gray;">Field Description</h6>
+
+                                        <div>
+                                            <input class="form-control" type="text" name="fieldDescription" id="fieldDescription">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="box-card-alt">
+
+                                        <h6 style="color: gray;">Field Type</h6>
+
+                                        <div>
+                                            <select class="form-control">
+                                                <option>--- Select Field Type ---</option>
+                                                <option>Text</option>
+                                                <option>Number</option>
+                                                <option>Email</option>
+                                                <option>Date</option>
+                                                <option>File</option>
+                                                <option>Password</option>
+                                                <option>Textarea</option>
+                                                <option>Radio</option>
+                                                <option>Checkbox</option>
+                                                <option>Submit</option>
+                                                <option>Reset</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="box-card-alt">
+
+                                        <h6 style="color: gray;">Field Length</h6>
+
+                                        <div>
+                                            <input class="form-control" type="number" name="fieldLength" id="fieldLength">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="box-card-alt">
+
+                                        <h6 style="color: gray;">Display Option</h6>
+
+                                        <div>
+                                            <input class="form-control" type="text" name="displayOption" id="displayOption">
+                                        </div>
+
+                                    </div>
+
+                                    <input type="submit" class="btn blue-button float-right" value="Submit" />
+
+                                </form>
+                            </div>
+
+                            <div class="col-4">
+                                <form>
+
+                                    <h3>Categories</h3>
+                                    <div class="box-card-alt">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="personalInformation" value="option1" checked>
+                                            <label class="form-check-label" for="personalInformation">
+                                                Personal Information
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="contactDetails" value="option2">
+                                            <label class="form-check-label" for="contactDetails">
+                                                Contact Details
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="employmentDetails" value="option1" checked>
+                                            <label class="form-check-label" for="employmentDetails">
+                                                Employment Details
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="nextOfKinDetails" value="option2">
+                                            <label class="form-check-label" for="nextOfKinDetails">
+                                                Next of Kin Details
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="document" value="option1" checked>
+                                            <label class="form-check-label" for="document">
+                                                Document
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="+" value="option2">
+                                            <label class="form-check-label" for="+">
+                                                +
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            $("#backToPersonalInfo").click(function() {
+                $('#pills-tab li:eq(0) a').tab('show');
+            })
+
+            $("#moveToContact").click(function() {
+                $('#pills-tab li:eq(1) a').tab('show');
+            })
+
+            $("#backToContactDetails").click(function() {
+                $('#pills-tab li:eq(1) a').tab('show');
+            })
+
+            $("#moveToEmployment").click(function() {
+                $('#pills-tab li:eq(2) a').tab('show');
+            })
+
+            $("#moveToNextOfKin").click(function() {
+                $('#pills-tab li:eq(3) a').tab('show');
+            })
+
+            $("#backToEmploymentDetails").click(function() {
+                $('#pills-tab li:eq(2) a').tab('show');
+            })
+
+            $("#moveToDocumentDetails").click(function() {
+                $('#pills-tab li:eq(4) a').tab('show');
+            })
+
+            $("#backToNextOfKin").click(function() {
+                $('#pills-tab li:eq(3) a').tab('show');
+            })
+
+        </script>
 
 
         <script type="text/javascript">

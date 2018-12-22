@@ -209,6 +209,17 @@ color: #627CF6;
     box-shadow: 3px 3px 10px 4px lightgray;
 }
 
+.box-card-radio {
+    background: #ffffff;
+    padding: 10px 10px 20px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.box-card-radio:hover {
+    box-shadow: 3px 3px 10px 4px lightgray;
+}
+
 
 .dashboard-link {
     margin-top: 45px;
@@ -600,3 +611,6 @@ table {
 .negative {
     color: #f28973 !important;
 }
+
+/*CSS CNTINUATION*/
+

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Type</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/mCustomScrollbar.concat.min.js"></script>
+    <script src="js/solid.js"></script>
+    <script src="js/fontawesome5.js"></script>
+
+
+</head>
+
+<body>
+
+
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="logo-style">
+                    <img src="images/logo.png" class="d-block mx-auto" height="100"/>
+                </div>
+
+                <div class="sidebar-nav">
+
+                    <ul class="list-unstyled components">
+
+                        <li> <a href="admin-dashboard.html">Dashboard</a> </li>
+                        <li>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Loans</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li> <a href="loan-requests.html">Loan Requests</a> </li>
+                                <li> <a href="manage-loans.html">Manage Loans</a> </li>
+                            </ul>
+                        </li>
+                        <li> <a href="defaulters.html">Defaulters</a> </li>
+                        <li> <a href="transactions.html">Transactions</a> </li>
+                        <li> <a href="balance-sheet.html">Balance Sheet</a> </li>
+                        <li> <a href="customers.html">Customers</a> </li>
+                        <li> <a href="reporting.html">Reporting</a> </li>
+                        <li>
+                            <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administration</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu2">
+                                <li class="active"> <a href="document-type.html">Document Type</a> </li>
+                                <li> <a href="charges.html">Charges</a> </li>
+                                <li> <a href="loan-type.html">Loan Type</a> </li>
+                            </ul>
+                        </li>
+                        <li> <a href="#">Logout</a> </li>
+
+                    </ul>
+
+                </div>
+
+
+
+            </nav>
+
+
+
+            <!-- Page Content  -->
+            <div id="content">
+
+                <div>
+                    <div class="col-lg-12" style="width: 100%; height: 50px; background: #F2F2F2;">
+                        <button type="button" id="sidebarCollapse" class="btn blue-button" style="margin-top: 8px;">
+                            <i class="fas fa-align-left"></i>
+                            <!--<span>Toggle Sidebar</span>-->Toggle Menu
+                        </button>
+                    </div>
+
+                    <div class="content-wrapper">
+
+                        <div class="menu-heading">
+
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <h1 style="font-weight: 700; color: black;">Document Type</h1>
+                                </div>
+
+                                <div class="col-12 col-lg-6">
+                                    <a href="#" class="btn blue-button float-lg-right" data-toggle="modal" data-target="#createField"><i class="fas fa-plus"></i> Add New</a>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="row" style="padding: 0px 10px;">
+
+                            <div class="col-12 col-lg-12 col-md-12 col-sm-12 filter-div">
+
+                                <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+
+                                    <div style="overflow: auto">
+
+                                        <table class="table text-nowrap">
+                                            <thead style="background-color: #627CF6; color: white;">
+                                            <tr>
+                                                <td>Sn</td>
+                                                <td>File Code</td>
+                                                <td>File Description</td>
+                                                <td>Action</td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <tr class="fancy-table-alt">
+                                                <td>1</td>
+                                                <td>NationalIdcard</td>
+                                                <td>National ID Card</td>
+                                                <td>
+                                                    <a class="btn btn-sm blue-button" href="#">Edit</a>
+                                                    <a class="btn btn-sm red-button" href="#">Remove</a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="fancy-table-alt">
+                                                <td>2</td>
+                                                <td>DriversLicense</td>
+                                                <td>Drivers License</td>
+                                                <td>
+                                                    <a class="btn btn-sm blue-button" href="#">Edit</a>
+                                                    <a class="btn btn-sm red-button" href="#">Remove</a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="fancy-table-alt">
+                                                <td>3</td>
+                                                <td>InternationalPassport</td>
+                                                <td>International Passport</td>
+                                                <td>
+                                                    <a class="btn btn-sm blue-button" href="#">Edit</a>
+                                                    <a class="btn btn-sm red-button" href="#">Remove</a>
+                                                </td>
+                                            </tr>
+
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Add New Field Modal -->
+        <div class="modal fade" id="createField" tabindex="-1" role="dialog" aria-labelledby="createField" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add New Document Type</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="padding-bottom: 30px;">
+                        <form>
+                            <div class="box-card-alt">
+
+                                <h6 style="color: gray;">Document Code</h6>
+
+                                <div>
+                                    <input class="form-control" type="text" name="documentCode" id="documentCode">
+                                </div>
+
+                            </div>
+
+                            <div class="box-card-alt">
+
+                                <h6 style="color: gray;">Document Description</h6>
+
+                                <div>
+                                    <input class="form-control" type="text" name="documentDescription" id="documentDescription">
+                                </div>
+
+                            </div>
+
+                            <input type="submit" class="btn blue-button float-right" value="Submit" />
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
+
+
+</body>
+</html>

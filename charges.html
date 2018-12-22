@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charges</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/mCustomScrollbar.concat.min.js"></script>
+    <script src="js/solid.js"></script>
+    <script src="js/fontawesome5.js"></script>
+
+
+</head>
+
+<body>
+
+
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="logo-style">
+                    <img src="images/logo.png" class="d-block mx-auto" height="100"/>
+                </div>
+
+                <div class="sidebar-nav">
+
+                    <ul class="list-unstyled components">
+
+                        <li> <a href="admin-dashboard.html">Dashboard</a> </li>
+                        <li>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Loans</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li> <a href="loan-requests.html">Loan Requests</a> </li>
+                                <li> <a href="manage-loans.html">Manage Loans</a> </li>
+                            </ul>
+                        </li>
+                        <li> <a href="defaulters.html">Defaulters</a> </li>
+                        <li> <a href="transactions.html">Transactions</a> </li>
+                        <li> <a href="balance-sheet.html">Balance Sheet</a> </li>
+                        <li> <a href="customers.html">Customers</a> </li>
+                        <li> <a href="reporting.html">Reporting</a> </li>
+                        <li>
+                            <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administration</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu2">
+                                <li> <a href="document-type.html">Document Type</a> </li>
+                                <li class="active"> <a href="charges.html">Charges</a> </li>
+                                <li> <a href="loan-type.html">Loan Type</a> </li>
+                            </ul>
+                        </li>
+                        <li> <a href="#">Logout</a> </li>
+
+                    </ul>
+
+                </div>
+
+
+
+            </nav>
+
+
+
+            <!-- Page Content  -->
+            <div id="content">
+
+                <div>
+                    <div class="col-lg-12" style="width: 100%; height: 50px; background: #F2F2F2;">
+                        <button type="button" id="sidebarCollapse" class="btn blue-button" style="margin-top: 8px;">
+                            <i class="fas fa-align-left"></i>
+                            <!--<span>Toggle Sidebar</span>-->Toggle Menu
+                        </button>
+                    </div>
+
+                    <div class="content-wrapper">
+
+                        <div class="menu-heading">
+
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <h1 style="font-weight: 700; color: black;">Charges</h1>
+                                </div>
+
+                                <div class="col-12 col-lg-6">
+                                    <a href="#" class="btn blue-button float-lg-right" data-toggle="modal" data-target="#createField"><i class="fas fa-plus"></i> Add New</a>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="row" style="padding: 0px 10px;">
+
+                            <div class="col-12 col-lg-12 col-md-12 col-sm-12 filter-div">
+
+                                <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+
+                                    <div style="overflow: auto">
+
+                                        <table class="table text-nowrap">
+                                            <thead style="background-color: #627CF6; color: white;">
+                                            <tr>
+                                                <td>Sn</td>
+                                                <td>Charge Code</td>
+                                                <td>Charge Description</td>
+                                                <td>Charge Type</td>
+                                                <td>Amount</td>
+                                                <td>Action</td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <tr class="fancy-table-alt">
+                                                <td>1</td>
+                                                <td>loanA</td>
+                                                <td>Loan A</td>
+                                                <td>Percentage</td>
+                                                <td>10%</td>
+                                                <td>
+                                                    <a class="btn btn-sm blue-button" href="#">Edit</a>
+                                                    <a class="btn btn-sm red-button" href="#">Remove</a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="fancy-table-alt">
+                                                <td>2</td>
+                                                <td>loanB</td>
+                                                <td>Loan B</td>
+                                                <td>Fixed</td>
+                                                <td>2,450</td>
+                                                <td>
+                                                    <a class="btn btn-sm blue-button" href="#">Edit</a>
+                                                    <a class="btn btn-sm red-button" href="#">Remove</a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="fancy-table-alt">
+                                                <td>3</td>
+                                                <td>loanC</td>
+                                                <td>Loan C</td>
+                                                <td>Fixed</td>
+                                                <td>10,500</td>
+                                                <td>
+                                                    <a class="btn btn-sm blue-button" href="#">Edit</a>
+                                                    <a class="btn btn-sm red-button" href="#">Remove</a>
+                                                </td>
+                                            </tr>
+
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Add New Field Modal -->
+        <div class="modal fade" id="createField" tabindex="-1" role="dialog" aria-labelledby="createField" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add New Charge Type</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="padding-bottom: 30px;">
+                        <form>
+                            <div class="box-card-alt">
+
+                                <h6 style="color: gray;">Charges Code</h6>
+
+                                <div>
+                                    <input class="form-control" type="text" name="chargesCode" id="chargesCode">
+                                </div>
+
+                            </div>
+
+                            <div class="box-card-alt">
+
+                                <h6 style="color: gray;">Charges Description</h6>
+
+                                <div>
+                                    <input class="form-control" type="text" name="chargesDescription" id="chargesDescription">
+                                </div>
+
+                            </div>
+
+                            <div class="box-card-alt">
+
+                                <h6 style="color: gray;">Select Charge Type</h6>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="chargeType" id="fixed" value="fixed">
+                                    <label class="form-check-label" for="fixed">Fixed</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="chargeType" id="percentage" value="percentage">
+                                    <label class="form-check-label" for="percentage">Percentage</label>
+                                </div>
+
+                            </div>
+
+                            <div class="box-card-radio fixed" style="display: none;">
+
+                                <h6 style="color: gray;">Enter The Fixed Amount to be Charged</h6>
+
+                                <div>
+                                    <input class="form-control" type="number" name="fixedChargesAmount" id="fixedChargesAmount">
+                                </div>
+
+                            </div>
+
+                            <div class="box-card-radio percentage" style="display: none;">
+
+                                <h6 style="color: gray;">Enter Percentage of Loan Amount to be Charged</h6>
+
+                                <div>
+                                    <input class="form-control" type="number" name="percentageChargesAmount" id="percentageChargesAmount">
+                                </div>
+
+                            </div>
+
+                            <input type="submit" class="btn blue-button float-right" value="Submit" />
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $('input[type="radio"]').click(function(){
+                if($(this).attr("value")=="fixed"){
+                    $(".fixed").show('fast');
+                    $(".percentage").hide('fast');
+                }
+                if($(this).attr("value")=="percentage"){
+                    $(".percentage").show('fast');
+                    $(".fixed").hide('fast');
+
+                }
+            });
+
+        </script>
+
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
+
+
+</body>
+</html>
